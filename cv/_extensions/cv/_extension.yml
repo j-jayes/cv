@@ -1,0 +1,21 @@
+title: Cv
+author: Jonathan Jayes
+version: 1.0.0
+quarto-required: ">=1.3.0"
+contributes:
+  formats:
+    html:
+      toc: true
+      theme: [yeti, custom_2.scss]
+    pdf:
+      # Document styling
+      # geometry:
+      #   - top=10pc     # 10p0
+      #   - bottom=10pc  # 10p0
+      #   - left=11pc    # 11p0
+      #   - right=11pc   # 11p0
+      #   - heightrounded
+      include-in-header:
+        - "include-in-header.tex"
+      mainfont: "Lato"
+

@@ -1,0 +1,108 @@
+/*-- scss:defaults --*/
+
+/* TODO: Customize html appearance by setting SCSS variables */
+/* See https://quarto.org/docs/output-formats/html-themes.html#theme-options */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+/* Define base font and background */
+body {
+    font-family: 'Lato', sans-serif; /* Body font */
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style the header where the name appears */
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+
+    /* Style the name to be more prominent */
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #000;
+        font-family: 'Playfair Display', serif; /* Header font */
+    }
+}
+
+/* Style for section titles */
+h2 {
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    color: #0366d6; /* You can use a color that matches your personal brand */
+    font-family: 'Playfair Display', serif; /* Header font */
+}
+
+/* General styling for links */
+a {
+    color: #0366d6;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Customize the look for individual list items */
+li {
+    margin-bottom: 10px;
+}
+
+/* Customizations for different sections such as Experience, Education, etc. */
+section {
+    margin-bottom: 20px;
+}
+
+/* If you have specific classes or IDs used in your HTML, you can style them here. */
+.experience-item,
+.education-item,
+.publication-item {
+    // Add styles for each type of item if needed
+}
+
+/* Responsive design adjustments can be made as well */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+.contact-info {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    i {
+        margin-right: 10px;
+    }
+
+    a {
+        color: #0366d6;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Any other specific styles can be added as needed */
+
+
+/* Any other specific styles can be added as needed */
+  
+
+/*-- scss:rules --*/
+
+/* TODO: Provide custom CSS rules */

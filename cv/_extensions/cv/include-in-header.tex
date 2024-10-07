@@ -1,0 +1,32 @@
+% Load necessary packages
+\usepackage{import}
+\usepackage{wrapfig}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+
+% Define color and font theme
+\usepackage{xcolor}
+\definecolor{linkcolor}{HTML}{1F77B4}  % Adjust the hex code to match moderncv blue
+\usepackage{fontspec}
+\setmainfont{Lato}                    % Choose a similar sans-serif font
+\setsansfont{Lato}
+
+% Custom commands to replicate moderncv personal data layout
+\newcommand{\personaldata}[1]{
+  \noindent\textbf{#1}\vspace{6pt}
+}
+
+% Set up commands for sections to replicate `\section` in moderncv
+\newcommand{\cvsection}[1]{
+  \noindent\textbf{\large #1}\vspace{6pt}\hrule\vspace{6pt}
+}
+
+% Command for entries to replicate `\cventry`
+\newcommand{\cventry}[6]{
+  \noindent\textbf{#1} #2 at #3, #4 \textit{#5}
+  \begin{itemize}
+    \item #6
+  \end{itemize}
+}
+
+
