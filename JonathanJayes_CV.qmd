@@ -1,0 +1,145 @@
+---
+title: "Jonathan Jayes' CV"
+author:
+  firstname: Jonathan
+  lastname: Jayes
+  address: "Södra Esplanaden 36, Lund, 223 52, Sweden"
+  position: "Data Scientist ・ Economic Historian"
+  contacts:
+    - icon: fa envelope
+      text: j0nathanjayes@gmail.com
+      url: "j0nathanjayes@gmail.com"
+    # - icon: assets/icon/solid-phone.svg
+    #   text: "+46 72 403 8126"
+    - icon: assets/icon/bi-house-fill.svg
+      text: interludeone.com
+      url: https://interludeone.com
+    # - icon: fa brands orcid
+    #   text: 0000-0000-0000-0000
+    #   url: https://orcid.org/0000-0000-0000-0000
+    - icon: fa brands github
+      text: GitHub
+      url: https://github.com/j-jayes
+    - icon: fa brands linkedin
+      text: LinkedIn
+      url: https://linkedin.com/in/jonathanjayes
+    # - icon: fa brands x-twitter
+    #   text: twitter
+    #   url: https://twitter.com/example
+format: awesomecv-typst
+---
+
+Full stack data scientist. 
+Preferred tools: Python for data wrangling, R for visualisation, SQLite for read only databases, OpenAI API for formatting unstructured data, Google Cloud Functions and GitHub Actions for ML Ops.
+
+## Education
+
+```{=typst}
+#resume-entry(
+  title: "PhD in Economic History",
+  location: "Lund, Sweden",
+  date: "2021 - 2025",
+  description: "Lund University, School of Economics and Management. Thesis supervised by Prof. Kerstin Enflo. Examining winners and losers of technological change during the electrification in the 20th century."
+)
+#resume-entry(
+  title: "Master's in Economics (cum laude)",
+  location: "Stellenbosch, South Africa",
+  date: "2020 - 2021",
+  description: "Stellenbosch University. Researcher at the Laboratory for the Economics of Africa's Past. Submitted 'A Century Later: Lessons from the Spanish Flu Pandemic of 1918' to the South African Presidency."
+)
+#resume-entry(
+  title: "Honours in Economics",
+  location: "Cape Town, South Africa",
+  date: "2018",
+  description: "University of Cape Town. Class medalist in Policy Analysis. Core courses: macroeconomics, microeconomics, econometrics, and mathematics for economists."
+)
+#resume-entry(
+  title: "Bachelor's in Social Science",
+  location: "Cape Town, South Africa",
+  date: "2015 - 2017",
+  description: "University of Cape Town. Economics and Economic History. Dean's Merit List for three years. Class medalist in Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
+)
+
+```
+
+## Publications
+
+```{=typst}
+#resume-entry(
+  title: "Health inequality and the 1918 Spanish flu in South Africa",
+  location: "World Development Special Issue",
+  date: "2021",
+  description: "Co-authored with Johan Fourie. DOI: 10.1016/j.worlddev.2021.105407."
+)
+#resume-entry(
+  title: "Data Blog",
+  location: "interludeone.com",
+  date: "Ongoing",
+  description: "Showcases personal data science projects."
+)
+
+```
+
+## Work Experience
+
+```{=typst}
+#resume-entry(
+  title: "Data Scientist",
+  location: "Remote",
+  date: "December 2022 - Present",
+  description: "Codera Analytics. Automated collection of macroeconomic and ESG data, visualization of provincial revenue and expenditure trends."
+)
+#resume-entry(
+  title: "Junior Data Scientist",
+  location: "Remote",
+  date: "January 2022 - March 2022",
+  description: "Fathom Data. Created automated Rmarkdown reports, presented a session on code generation for commercialization of data products."
+)
+#resume-entry(
+  title: "Quantitative Analyst",
+  location: "University of California, Berkeley",
+  date: "June 2020 - February 2021",
+  description: "Research assistant to Prof. Barry Eichengreen. Conducted NLP analysis for a study on South Africa's Gold Standard and Great Depression."
+)
+#resume-entry(
+  title: "Junior Consultant",
+  location: "Stellenbosch, South Africa",
+  date: "March 2019 - January 2020",
+  description: "FTI Consulting. Led a pro bono project on economic impact assessment, contributed to expert reports in telecommunications, oil, and poultry industries."
+)
+#resume-entry(
+  title: "Financial Director and Debating Coach",
+  location: "Cape Town, South Africa",
+  date: "February 2016 - November 2018",
+  description: "Thethani Debating League. Managed budgets, organized tournaments, and coached debating workshops. Awarded Investec UCT Student Leadership Awards."
+)
+
+```
+
+## Skills
+
+```{=typst}
+#resume-entry(
+  title: "Data Science Skills",
+  description: "Scraping and cleaning data, visualizing patterns, creating interactive dashboards, supervised and unsupervised ML."
+)
+#resume-entry(
+  title: "Software",
+  description: "Python, R, SQLite, OpenAI API, Google Cloud Functions, GitHub Actions."
+)
+#resume-entry(
+  title: "Languages",
+  description: "English (Native), Swedish (Intermediate), French (Learning)."
+)
+
+```
+
+## Interests
+
+```{=typst}
+#resume-entry(
+  title: "Hobbies",
+  description: "Homebrewing pale ales, running marathons."
+)
+
+```
