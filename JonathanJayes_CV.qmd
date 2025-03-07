@@ -1,7 +1,7 @@
 ---
 title: "Jonathan Jayes' CV"
 author:
-  firstname: Jonathan
+  firstname: Jonathan Alistair
   lastname: Jayes
   address: "Södra Esplanaden 36, Lund, 223 52, Sweden"
   position: "Data Scientist ・ Economic Historian"
@@ -29,66 +29,26 @@ author:
 format: awesomecv-typst
 ---
 
-Full stack data scientist. 
-Preferred tools: Python for data wrangling, R for visualisation, SQLite for read only databases, OpenAI API for formatting unstructured data, Google Cloud Functions and GitHub Actions for ML Ops.
-
-## Education
-
-```{=typst}
-#resume-entry(
-  title: "PhD in Economic History",
-  location: "Lund, Sweden",
-  date: "2021 - 2025",
-  description: "Lund University, School of Economics and Management. Thesis supervised by Prof. Kerstin Enflo. Examining winners and losers of technological change during the electrification in the 20th century."
-)
-#resume-entry(
-  title: "Master's in Economics (cum laude)",
-  location: "Stellenbosch, South Africa",
-  date: "2020 - 2021",
-  description: "Stellenbosch University. Researcher at the Laboratory for the Economics of Africa's Past. Submitted 'A Century Later: Lessons from the Spanish Flu Pandemic of 1918' to the South African Presidency."
-)
-#resume-entry(
-  title: "Honours in Economics",
-  location: "Cape Town, South Africa",
-  date: "2018",
-  description: "University of Cape Town. Class medalist in Policy Analysis. Core courses: macroeconomics, microeconomics, econometrics, and mathematics for economists."
-)
-#resume-entry(
-  title: "Bachelor's in Social Science",
-  location: "Cape Town, South Africa",
-  date: "2015 - 2017",
-  description: "University of Cape Town. Economics and Economic History. Dean's Merit List for three years. Class medalist in Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
-)
-
-```
-
-## Publications
-
-```{=typst}
-#resume-entry(
-  title: "Health inequality and the 1918 Spanish flu in South Africa",
-  location: "World Development Special Issue",
-  date: "2021",
-  description: "Co-authored with Johan Fourie. DOI: 10.1016/j.worlddev.2021.105407."
-)
-#resume-entry(
-  title: "Data Blog",
-  location: "interludeone.com",
-  date: "Ongoing",
-  description: "Showcases personal data science projects."
-)
-
-```
+Economics-trained data scientist who transforms raw data into actionable intelligence. Expertise in using ML/AI to extract value from previously unusable data sources. Demonstrated success in designing efficient pipelines that dramatically reduce costs.
 
 ## Work Experience
 
 ```{=typst}
-#resume-entry(
+#resume-entry-bullets(
   title: "Data Scientist",
   location: "Remote",
   date: "December 2022 - Present",
-  description: "Codera Analytics. Automated collection of macroeconomic and ESG data, visualization of provincial revenue and expenditure trends."
+  description: "Codera Analytics. Led various data science projects including public finance data collection and analysis project:",
+  bullets: (
+    "Executed full project lifecycle: planning, bidding, winning, and delivering a comprehensive pipeline to collect, classify, extract and publish public finance data across the African continent",
+    "Developed and maintained over 60 web scrapers to automatically collect PDF budget documents from government institutions and multilateral organizations",
+    "Created a document classification system using multimodal large language models to accurately categorize heterogeneous financial documents according to a custom classification schema",
+    "Built robust metadata extraction workflows and database architecture to store and organize thousands of documents spanning from 2013 to present",
+    "Designed and implemented an internal dashboard tool enabling clients to visualize data coverage and extract insights from the collected financial information"
+  )
 )
+
+
 #resume-entry(
   title: "Junior Data Scientist",
   location: "Remote",
@@ -107,25 +67,90 @@ Preferred tools: Python for data wrangling, R for visualisation, SQLite for read
   date: "March 2019 - January 2020",
   description: "FTI Consulting. Led a pro bono project on economic impact assessment, contributed to expert reports in telecommunications, oil, and poultry industries."
 )
-#resume-entry(
-  title: "Financial Director and Debating Coach",
-  location: "Cape Town, South Africa",
-  date: "February 2016 - November 2018",
-  description: "Thethani Debating League. Managed budgets, organized tournaments, and coached debating workshops. Awarded Investec UCT Student Leadership Awards."
-)
+// #resume-entry(
+//   title: "Financial Director and Debating Coach",
+//   location: "Cape Town, South Africa",
+//   date: "February 2016 - November 2018",
+//   description: "Thethani Debating League. Managed budgets, organized tournaments, and coached debating workshops. Awarded Investec UCT Student Leadership Awards."
+// )
 
 ```
+
+
+## Education
+
+```{=typst}
+#resume-entry-bullets(
+  title: "PhD in Economic History",
+  location: "Lund University, Sweden",
+  date: "2021 - 2025",
+  description: "Examining winners and losers of technological change during the electrification in the 20th century. Thesis supervised by Prof. Kerstin Enflo.",
+  bullets: (
+    "Leveraged cutting-edge technology (LLMs, computer vision, text embedding models) to make historical data sources accessible at scale that would otherwise be impractical to analyze",
+    "Designed and implemented a novel AI pipeline to transform historical biographical dictionaries into machine-readable format, reducing transcription time by 3 months while significantly expanding the observation set beyond previous studies",
+    "Developed diverse methodological expertise across four thesis papers: systematic literature review, cross-sectional historical census analysis, biographical text data mining, and time-series analysis of corporate director networks"
+  )
+)
+
+#resume-entry-bullets(
+  title: "Masters in Economics",
+  location: "Stellenbosch University, South Africa",
+  date: "2020 - 2021",
+  description: "Stellenbosch University. Researcher at the Laboratory for the Economics of Africa's Past.",
+  bullets: (
+    "Submitted 'A Century Later: Lessons from the Spanish Flu Pandemic of 1918' to the South African Presidency",
+    "Graduated with distinction",
+    "Published my first paper in World Development Special Issue on Pandemics"
+  )
+)
+
+#resume-entry(
+  title: "Honours in Economics and Bachelors in Social Science ",
+  location: "University of Cape Town, South Africa",
+  date: "2015 - 2018",
+  description: "Dean's Merit List. Class medalist in Policy Analysis, Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
+)
+
+// #resume-entry(
+//   title: "Honours in Economics",
+//   location: "Cape Town, South Africa",
+//   date: "2018",
+//   description: "University of Cape Town. Class medalist in Policy Analysis. Core courses: macroeconomics, microeconomics, econometrics, and mathematics for economists."
+// )
+// #resume-entry(
+//   title: "Bachelor's in Social Science",
+//   location: "Cape Town, South Africa",
+//   date: "2015 - 2017",
+//   description: "University of Cape Town. Economics and Economic History. Dean's Merit List for three years. Class medalist in Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
+// )
+
+```
+
+<!-- ## Publications
+
+```{=typst}
+#resume-entry(
+  title: "Health inequality and the 1918 Spanish flu in South Africa",
+  location: "World Development Special Issue",
+  date: "2021",
+  description: "Co-authored with Johan Fourie. DOI: 10.1016/j.worlddev.2021.105407."
+)
+#resume-entry(
+  title: "Data Blog",
+  location: "interludeone.com",
+  date: "Ongoing",
+  description: "Showcases personal data science projects."
+)
+
+``` -->
+
 
 ## Skills
 
 ```{=typst}
 #resume-entry(
-  title: "Data Science Skills",
-  description: "Scraping and cleaning data, visualizing patterns, creating interactive dashboards, supervised and unsupervised ML."
-)
-#resume-entry(
   title: "Software",
-  description: "Python, R, SQLite, OpenAI API, Google Cloud Functions, GitHub Actions."
+  description: "Python, R, SQL, experience with OpenAI / Gemini / Claude API, Google Cloud Functions, GitHub Actions. Learning: Docker."
 )
 #resume-entry(
   title: "Languages",
@@ -134,7 +159,7 @@ Preferred tools: Python for data wrangling, R for visualisation, SQLite for read
 
 ```
 
-## Interests
+<!-- ## Interests
 
 ```{=typst}
 #resume-entry(
@@ -142,4 +167,4 @@ Preferred tools: Python for data wrangling, R for visualisation, SQLite for read
   description: "Homebrewing pale ales, running marathons."
 )
 
-```
+``` -->

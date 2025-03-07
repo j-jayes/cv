@@ -12,9 +12,9 @@
 #let color-lightgray = rgb("#999999")
 
 // Default style
-#let color-accent-default = rgb("#dc3522")
-#let font-header-default = ("Roboto", "Arial", "Helvetica", "Dejavu Sans")
-#let font-text-default = ("Source Sans Pro", "Arial", "Helvetica", "Dejavu Sans")
+#let color-accent-default = rgb("#1a365d") // Dark blue instead of red
+#let font-header-default = ("Montserrat", "Arial", "Helvetica", "Dejavu Sans") // Bold sans serif
+#let font-text-default = ("Lato", "Arial", "Helvetica", "Dejavu Sans") // Lato as requested
 #let align-header-default = center
 
 // User defined style
@@ -57,15 +57,20 @@ $endif$
   }
 }
 
-// contaxt text parser
+// context text parser
 #let unescape_text(text) = {
   // This is not a perfect solution
   text.replace("\\", "").replace(".~", ". ")
 }
 
+// Simple italic text handling - just return as is to avoid errors
+#let parse_italics(text) = {
+  return text
+}
+
 // layout utility
 #let __justify_align(left_body, right_body) = {
-  block[
+  block(spacing: 0.4em)[
     #box(width: 4fr)[#left_body]
     #box(width: 1fr)[
       #align(right)[
@@ -99,10 +104,10 @@ $endif$
 /// - body (content): The body of the right header
 #let secondary-right-header(body) = {
   set text(
-    size: 10pt,
-    weight: "thin",
+    size: 9pt,
+    weight: "regular",
     style: "italic",
-    fill: color-accent,
+    fill: color-accent, // Changed to accent (dark blue) as requested
   )
   body
 }
@@ -111,10 +116,10 @@ $endif$
 /// - body (content): The body of the right header
 #let tertiary-right-header(body) = {
   set text(
-    weight: "light",
-    size: 9pt,
+    weight: "regular",
+    size: 8.5pt,
     style: "italic",
-    fill: color-gray,
+    fill: color-accent, // Changed to match the secondary header
   )
   body
 }
@@ -124,20 +129,18 @@ $endif$
 /// - secondary (content): The secondary section of the header
 #let justified-header(primary, secondary) = {
   set block(
-    above: 0.7em,
-    below: 0.7em,
+    above: 0.55em, // Increased for better readability
+    below: 0.3em,
   )
-  pad[
-    #__justify_align[
-      #set text(
-        size: 12pt,
-        weight: "bold",
-        fill: color-darkgray,
-      )
-      #primary
-    ][
-      #secondary-right-header[#secondary]
-    ]
+  __justify_align[
+    #set text(
+      size: 11pt,
+      weight: "bold",
+      fill: color-darkgray,
+    )
+    #primary
+  ][
+    #secondary-right-header[#secondary]
   ]
 }
 
@@ -147,7 +150,7 @@ $endif$
 #let secondary-justified-header(primary, secondary) = {
   __justify_align[
      #set text(
-      size: 10pt,
+      size: 9.5pt, // More readable size
       weight: "regular",
       fill: color-gray,
     )
@@ -166,10 +169,10 @@ $endif$
   lastname: "",
 ) = {
   
-  pad(bottom: 5pt)[
+  pad(bottom: 3pt)[
     #block[
       #set text(
-        size: 32pt,
+        size: 28pt, // Better sized header
         style: "normal",
         font: (font-header),
       )
@@ -183,12 +186,12 @@ $endif$
   position: "",
 ) = {
   set block(
-      above: 0.75em,
-      below: 0.75em,
+      above: 0.4em,
+      below: 0.4em,
     )
   
   set text(
-    color-accent,
+    color-accent, // Dark blue as per request
     size: 9pt,
     weight: "regular",
   )
@@ -202,12 +205,12 @@ $endif$
   address: ""
 ) = {
   set block(
-      above: 0.75em,
-      below: 0.75em,
+      above: 0.3em,
+      below: 0.3em,
   )
   set text(
     color-lightgray,
-    size: 9pt,
+    size: 8pt,
     style: "italic",
   )
 
@@ -221,13 +224,13 @@ $endif$
   if(contacts.len() > 1) {
     block[
       #set text(
-        size: 9pt,
+        size: 8pt,
         weight: "regular",
         style: "normal",
       )
       #align(horizon)[
         #for contact in contacts [
-          #set box(height: 9pt)
+          #set box(height: 8pt)
           #box[#parse_icon_string(contact.icon) #link(contact.url)[#contact.text]]
           #separator
         ]
@@ -257,7 +260,7 @@ $endif$
 ) = {
   if profile-photo.len() > 0 {
     block(
-      above: 15pt,
+      above: 10pt,
       stroke: none,
       radius: 9999pt,
       clip: true,
@@ -313,13 +316,13 @@ $endif$
 
 #let resume-item(body) = {
   set text(
-    size: 10pt,
+    size: 9.5pt, // More readable size
     style: "normal",
     weight: "light",
     fill: color-darknight,
   )
-  set par(leading: 0.65em)
-  set list(indent: 1em)
+  set par(leading: 0.65em) // Better line spacing
+  set list(indent: 0.8em, spacing: 0.4em) // Better list spacing
   body
 }
 
@@ -329,9 +332,40 @@ $endif$
   date: "",
   description: ""
 ) = {
-  pad[
-    #justified-header(title, location)
-    #secondary-justified-header(description, date)
+  block(spacing: 0.4em)[ // Increased spacing between entries for professionalism
+    #justified-header(parse_italics(title), location)
+    #secondary-justified-header(parse_italics(description), date)
+  ]
+}
+
+// New function that supports bullet points in the description
+#let resume-entry-bullets(
+  title: none,
+  location: "",
+  date: "",
+  description: "",
+  bullets: ()
+) = {
+  block(spacing: 0.4em)[ // Increased spacing between entries for professionalism
+    #justified-header(parse_italics(title), location)
+    #secondary-justified-header(parse_italics(description), date)
+    
+    #if bullets.len() > 0 [
+      #block(above: 0.3em)[
+        #set text(
+          size: 9.5pt,
+          style: "normal",
+          weight: "light",
+          fill: color-darknight,
+        )
+        #set par(leading: 0.65em) // Slightly increased leading for bullet points
+        #list(
+          ..bullets.map(item => [#parse_italics(item)]),
+          indent: 0.8em,
+          spacing: 0.4em // Increased bullet point spacing
+        )
+      ]
+    ]
   ]
 }
 
@@ -354,18 +388,18 @@ $endif$
   
   set text(
     font: (font-text),
-    size: 11pt,
+    size: 10pt, // Better base font size
     fill: color-darkgray,
     fallback: true,
   )
   
   set page(
     paper: "a4",
-    margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 10mm),
+    margin: (left: 18mm, right: 18mm, top: 10mm, bottom: 10mm), // Increased margins for more professional look
     footer: [
       #set text(
-        fill: gray,
-        size: 8pt,
+        fill: color-accent, // Footer in accent color
+        size: 7.5pt, // Slightly increased size
       )
       #__justify_align_3[
         #smallcaps[#date]
@@ -383,7 +417,8 @@ $endif$
   )
   
   // set paragraph spacing
-
+  set par(leading: 0.6em) // Better paragraph spacing
+  
   set heading(
     numbering: none,
     outlined: false,
@@ -391,24 +426,25 @@ $endif$
   
   show heading.where(level: 1): it => [
     #set block(
-      above: 1.5em,
-      below: 1em,
+      above: 1.2em, // Increased for better spacing
+      below: 0.8em, // Increased for better spacing
     )
     #set text(
-      size: 16pt,
+      size: 14pt,
       weight: "regular",
+      fill: color-accent, // Full heading in dark blue
     )
     
     #align(left)[
-      #text[#strong[#text(color-accent)[#it.body.text.slice(0, 3)]#text(color-darkgray)[#it.body.text.slice(3)]]]
-      #box(width: 1fr, line(length: 100%))
+      #text[#strong[#it.body]]
+      #box(width: 1fr, line(length: 100%, stroke: color-accent)) // Line also in dark blue
     ]
   ]
   
   show heading.where(level: 2): it => {
     set text(
       color-middledarkgray,
-      size: 12pt,
+      size: 11pt,
       weight: "thin"
     )
     it.body
@@ -416,7 +452,7 @@ $endif$
   
   show heading.where(level: 3): it => {
     set text(
-      size: 10pt,
+      size: 9pt,
       weight: "regular",
       fill: color-gray,
     )
@@ -432,4 +468,3 @@ $endif$
                 profile-photo: profile-photo,)
   body
 }
-
