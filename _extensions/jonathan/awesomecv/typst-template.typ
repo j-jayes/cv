@@ -326,29 +326,58 @@ $endif$
   body
 }
 
+// Modified with company_name and company_url, removed location
 #let resume-entry(
   title: none,
-  location: "",
   date: "",
-  description: ""
+  description: "",
+  company_name: "",
+  company_url: "",
 ) = {
   block(spacing: 0.4em)[ // Increased spacing between entries for professionalism
-    #justified-header(parse_italics(title), location)
-    #secondary-justified-header(parse_italics(description), date)
+    // Company name on the right (where location was)
+    #justified-header(
+      parse_italics(title), 
+      if company_url != "" {
+        [#link(company_url)[#parse_italics(company_name)]]
+      } else {
+        parse_italics(company_name)
+      }
+    )
+    
+    // Date and description remain as before
+    #secondary-justified-header(
+      parse_italics(description),
+      date
+    )
   ]
 }
 
-// New function that supports bullet points in the description
+// Modified bullets function with company_name and company_url
 #let resume-entry-bullets(
   title: none,
-  location: "",
   date: "",
   description: "",
-  bullets: ()
+  bullets: (),
+  company_name: "",
+  company_url: "",
 ) = {
   block(spacing: 0.4em)[ // Increased spacing between entries for professionalism
-    #justified-header(parse_italics(title), location)
-    #secondary-justified-header(parse_italics(description), date)
+    // Company name on the right (where location was)
+    #justified-header(
+      parse_italics(title), 
+      if company_url != "" {
+        [#link(company_url)[#parse_italics(company_name)]]
+      } else {
+        parse_italics(company_name)
+      }
+    )
+    
+    // Date and description remain as before
+    #secondary-justified-header(
+      parse_italics(description),
+      date
+    )
     
     #if bullets.len() > 0 [
       #block(above: 0.3em)[

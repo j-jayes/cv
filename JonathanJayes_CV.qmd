@@ -36,9 +36,10 @@ Economics-trained data scientist who transforms raw data into actionable intelli
 ```{=typst}
 #resume-entry-bullets(
   title: "Data Scientist",
-  location: "Remote",
-  date: "December 2022 - Present",
-  description: "Codera Analytics. Led various data science projects including public finance data collection and analysis project:",
+  company_name: "Codera Analytics",
+  company_url: "https://codera.co.za/",
+  date: "12/2022 - Present",
+  description: "Led various data science projects including public finance data collection and analysis project:",
   bullets: (
     "Executed full project lifecycle: planning, bidding, winning, and delivering a comprehensive pipeline to collect, classify, extract and publish public finance data across the African continent",
     "Developed and maintained over 60 web scrapers to automatically collect PDF budget documents from government institutions and multilateral organizations",
@@ -48,31 +49,29 @@ Economics-trained data scientist who transforms raw data into actionable intelli
   )
 )
 
-
 #resume-entry(
   title: "Junior Data Scientist",
-  location: "Remote",
-  date: "January 2022 - March 2022",
-  description: "Fathom Data. Created automated Rmarkdown reports, presented a session on code generation for commercialization of data products."
+  company_name: "Fathom Data",
+  company_url: "https://fathomdata.dev",
+  date: "01/2022 - 03/2022",
+  description: "Created automated Rmarkdown reports, presented a session on code generation for commercialization of data products."
 )
+
 #resume-entry(
   title: "Quantitative Analyst",
-  location: "University of California, Berkeley",
-  date: "June 2020 - February 2021",
+  company_name: "University of California, Berkeley",
+  date: "06/2020 - 02/2021",
   description: "Research assistant to Prof. Barry Eichengreen. Conducted NLP analysis for a study on South Africa's Gold Standard and Great Depression."
 )
+
 #resume-entry(
   title: "Junior Consultant",
-  location: "Stellenbosch, South Africa",
-  date: "March 2019 - January 2020",
-  description: "FTI Consulting. Led a pro bono project on economic impact assessment, contributed to expert reports in telecommunications, oil, and poultry industries."
+  company_name: "FTI Consulting South Africa",
+  company_url: "https://www.fticonsulting.com",
+  date: "03/2019 - 01/2020",
+  description: "Led a pro bono project on economic impact assessment, contributed to expert reports in telecommunications, oil, and poultry industries."
 )
-// #resume-entry(
-//   title: "Financial Director and Debating Coach",
-//   location: "Cape Town, South Africa",
-//   date: "February 2016 - November 2018",
-//   description: "Thethani Debating League. Managed budgets, organized tournaments, and coached debating workshops. Awarded Investec UCT Student Leadership Awards."
-// )
+
 
 ```
 
@@ -82,7 +81,7 @@ Economics-trained data scientist who transforms raw data into actionable intelli
 ```{=typst}
 #resume-entry-bullets(
   title: "PhD in Economic History",
-  location: "Lund University, Sweden",
+  company_name: "Lund University, Sweden",
   date: "2021 - 2025",
   description: "Examining winners and losers of technological change during the electrification in the 20th century. Thesis supervised by Prof. Kerstin Enflo.",
   bullets: (
@@ -94,7 +93,7 @@ Economics-trained data scientist who transforms raw data into actionable intelli
 
 #resume-entry-bullets(
   title: "Masters in Economics",
-  location: "Stellenbosch University, South Africa",
+  company_name: "Stellenbosch University, South Africa",
   date: "2020 - 2021",
   description: "Stellenbosch University. Researcher at the Laboratory for the Economics of Africa's Past.",
   bullets: (
@@ -105,44 +104,12 @@ Economics-trained data scientist who transforms raw data into actionable intelli
 )
 
 #resume-entry(
-  title: "Honours in Economics and Bachelors in Social Science ",
-  location: "University of Cape Town, South Africa",
+  title: "Honours in Economics and Bachelors in Social Science",
+  company_name: "University of Cape Town, South Africa",
   date: "2015 - 2018",
   description: "Dean's Merit List. Class medalist in Policy Analysis, Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
 )
-
-// #resume-entry(
-//   title: "Honours in Economics",
-//   location: "Cape Town, South Africa",
-//   date: "2018",
-//   description: "University of Cape Town. Class medalist in Policy Analysis. Core courses: macroeconomics, microeconomics, econometrics, and mathematics for economists."
-// )
-// #resume-entry(
-//   title: "Bachelor's in Social Science",
-//   location: "Cape Town, South Africa",
-//   date: "2015 - 2017",
-//   description: "University of Cape Town. Economics and Economic History. Dean's Merit List for three years. Class medalist in Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
-// )
-
 ```
-
-<!-- ## Publications
-
-```{=typst}
-#resume-entry(
-  title: "Health inequality and the 1918 Spanish flu in South Africa",
-  location: "World Development Special Issue",
-  date: "2021",
-  description: "Co-authored with Johan Fourie. DOI: 10.1016/j.worlddev.2021.105407."
-)
-#resume-entry(
-  title: "Data Blog",
-  location: "interludeone.com",
-  date: "Ongoing",
-  description: "Showcases personal data science projects."
-)
-
-``` -->
 
 
 ## Skills
@@ -158,13 +125,3 @@ Economics-trained data scientist who transforms raw data into actionable intelli
 )
 
 ```
-
-<!-- ## Interests
-
-```{=typst}
-#resume-entry(
-  title: "Hobbies",
-  description: "Homebrewing pale ales, running marathons."
-)
-
-``` -->
