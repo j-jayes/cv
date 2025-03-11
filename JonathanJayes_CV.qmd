@@ -4,7 +4,7 @@ author:
   firstname: Jonathan Alistair
   lastname: Jayes
   address: "Södra Esplanaden 36, Lund, 223 52, Sweden"
-  position: "Data Scientist ・ Economic Historian"
+  position: "Data Scientist ・ Economic Consultant"
   contacts:
     - icon: fa envelope
       text: j0nathanjayes@gmail.com
@@ -29,7 +29,7 @@ author:
 format: awesomecv-typst
 ---
 
-Economics-trained data scientist who transforms raw data into actionable intelligence. Expertise in using ML/AI to extract value from previously unusable data sources. Demonstrated success in designing efficient pipelines that dramatically reduce costs.
+Economics-trained data scientist. I transform raw data into stories. Expertise in using ML/AI to extract value from previously unusable data sources. Demonstrated success in designing and coding pipelines that dramatically reduce costs.
 
 ## Work Experience
 
@@ -39,7 +39,7 @@ Economics-trained data scientist who transforms raw data into actionable intelli
   company_name: "Codera Analytics",
   company_url: "https://codera.co.za/",
   date: "12/2022 - Present",
-  description: "Led various data science projects including public finance data collection and analysis project:",
+  description: "Led various data science projects including a public finance data collection and analysis project:",
   bullets: (
     "Executed full project lifecycle: planning, bidding, winning, and delivering a comprehensive pipeline to collect, classify, extract and publish public finance data across the African continent",
     "Developed and maintained over 60 web scrapers to automatically collect PDF budget documents from government institutions and multilateral organizations",
@@ -54,7 +54,7 @@ Economics-trained data scientist who transforms raw data into actionable intelli
   company_name: "Fathom Data",
   company_url: "https://fathomdata.dev",
   date: "01/2022 - 03/2022",
-  description: "Created automated Rmarkdown reports, presented a session on code generation for commercialization of data products."
+  description: "Created automated reports, worked on commercialization of data products on consumer prices, presented on code that writes itself within automated report pipeline."
 )
 
 #resume-entry(
@@ -65,11 +65,11 @@ Economics-trained data scientist who transforms raw data into actionable intelli
 )
 
 #resume-entry(
-  title: "Junior Consultant",
+  title: "Junior Competition Economics Consultant",
   company_name: "FTI Consulting South Africa",
   company_url: "https://www.fticonsulting.com",
   date: "03/2019 - 01/2020",
-  description: "Led a pro bono project on economic impact assessment, contributed to expert reports in telecommunications, oil, and poultry industries."
+  description: "Led a project on economic impact assessment for an arts festival, contributed to expert reports in telecommunications, oil, and poultry industries. I turned international trade statistics into compelling narratives, using visualizations to communicate industry dynamics."
 )
 
 
@@ -107,7 +107,7 @@ Economics-trained data scientist who transforms raw data into actionable intelli
   title: "Honours in Economics and Bachelors in Social Science",
   company_name: "University of Cape Town, South Africa",
   date: "2015 - 2018",
-  description: "Dean's Merit List. Class medalist in Policy Analysis, Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
+  description: "Dean's Merit List. Class medalist in courses on Policy Analysis, Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
 )
 ```
 
@@ -123,5 +123,4 @@ Economics-trained data scientist who transforms raw data into actionable intelli
   title: "Languages",
   description: "English (Native), Swedish (Intermediate), French (Learning)."
 )
-
 ```
