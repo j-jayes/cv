@@ -71,8 +71,8 @@ $endif$
 // layout utility
 #let __justify_align(left_body, right_body) = {
   block(spacing: 0.4em)[
-    #box(width: 4fr)[#left_body]
-    #box(width: 1fr)[
+    #box(width: 3.5fr)[#left_body]
+    #box(width: 1.5fr)[
       #align(right)[
         #right_body
       ]
@@ -104,10 +104,10 @@ $endif$
 /// - body (content): The body of the right header
 #let secondary-right-header(body) = {
   set text(
-    size: 9pt,
-    weight: "regular",
-    style: "italic",
-    fill: color-accent, // Changed to accent (dark blue) as requested
+    size: 10pt,
+    weight: "bold",
+    style: "normal",
+    fill: color-darkgray, // Changed to dark gray for dates
   )
   body
 }
@@ -117,7 +117,7 @@ $endif$
 #let tertiary-right-header(body) = {
   set text(
     weight: "regular",
-    size: 8.5pt,
+    size: 9pt,
     style: "italic",
     fill: color-accent, // Changed to match the secondary header
   )
@@ -129,8 +129,8 @@ $endif$
 /// - secondary (content): The secondary section of the header
 #let justified-header(primary, secondary) = {
   set block(
-    above: 0.55em, // Increased for better readability
-    below: 0.3em,
+    above: 0.7em, // Increased spacing
+    below: 0.2em,
   )
   __justify_align[
     #set text(
@@ -150,9 +150,10 @@ $endif$
 #let secondary-justified-header(primary, secondary) = {
   __justify_align[
      #set text(
-      size: 9.5pt, // More readable size
+      size: 10pt, // Increased for better readability
       weight: "regular",
-      fill: color-gray,
+      style: "italic",
+      fill: color-darkgray,
     )
     #primary
   ][
@@ -316,7 +317,7 @@ $endif$
 
 #let resume-item(body) = {
   set text(
-    size: 9.5pt, // More readable size
+    size: 10pt, // Larger size to match description
     style: "normal",
     weight: "light",
     fill: color-darknight,
@@ -326,7 +327,27 @@ $endif$
   body
 }
 
-// Modified with company_name and company_url, removed location
+// Create a special clickable company name with visual indicator
+#let company_with_link(name, url) = {
+  if url != "" {
+    link(url)[
+      #set text(
+        fill: color-darkgray,
+        weight: "bold",
+      )
+      #box[
+        #name #h(2pt) #text(size: 7pt, fill: color-accent)[↗]
+      ]
+    ]
+  } else {
+    set text(
+      weight: "bold",
+    )
+    name
+  }
+}
+
+// Modified with company_name as bold and title as italic underneath
 #let resume-entry(
   title: none,
   date: "",
@@ -334,26 +355,40 @@ $endif$
   company_name: "",
   company_url: "",
 ) = {
-  block(spacing: 0.4em)[ // Increased spacing between entries for professionalism
-    // Company name on the right (where location was)
+  block(spacing: 0.1em)[
+    // Company name bold at the top left, date bold at top right
     #justified-header(
-      parse_italics(title), 
-      if company_url != "" {
-        [#link(company_url)[#parse_italics(company_name)]]
-      } else {
-        parse_italics(company_name)
-      }
-    )
-    
-    // Date and description remain as before
-    #secondary-justified-header(
-      parse_italics(description),
+      company_with_link(parse_italics(company_name), company_url),
       date
     )
+    
+    // Job title in italics underneath company name
+    #block(below: 0.6em)[
+      #set text(
+        size: 10pt,
+        style: "italic",
+        weight: "regular",
+        fill: color-darkgray,
+      )
+      #title
+    ]
+    
+    // Description with consistent text styling
+    #if description != "" [
+      #block(above: 0.2em, below: 0.2em)[
+        #set text(
+          size: 10pt,
+          style: "normal",
+          weight: "regular",
+          fill: color-darknight,
+        )
+        #parse_italics(description)
+      ]
+    ]
   ]
 }
 
-// Modified bullets function with company_name and company_url
+// Modified bullets function with company name bold at top and job title underneath in italics
 #let resume-entry-bullets(
   title: none,
   date: "",
@@ -362,29 +397,43 @@ $endif$
   company_name: "",
   company_url: "",
 ) = {
-  block(spacing: 0.4em)[ // Increased spacing between entries for professionalism
-    // Company name on the right (where location was)
+  block(spacing: 0.1em)[
+    // Company name bold at the top left, date bold at top right
     #justified-header(
-      parse_italics(title), 
-      if company_url != "" {
-        [#link(company_url)[#parse_italics(company_name)]]
-      } else {
-        parse_italics(company_name)
-      }
-    )
-    
-    // Date and description remain as before
-    #secondary-justified-header(
-      parse_italics(description),
+      company_with_link(parse_italics(company_name), company_url),
       date
     )
+    
+    // Job title in italics underneath company name
+    #block(below: 0.3em)[
+      #set text(
+        size: 10pt,
+        style: "italic",
+        weight: "regular",
+        fill: color-darkgray,
+      )
+      #title
+    ]
+    
+    // Description with consistent text styling
+    #if description != "" [
+      #block(above: 0.2em, below: 0.2em)[
+        #set text(
+          size: 10pt,
+          style: "normal",
+          weight: "regular",
+          fill: color-darknight,
+        )
+        #parse_italics(description)
+      ]
+    ]
     
     #if bullets.len() > 0 [
       #block(above: 0.3em)[
         #set text(
-          size: 9.5pt,
+          size: 10pt,
           style: "normal",
-          weight: "light",
+          weight: "regular",
           fill: color-darknight,
         )
         #set par(leading: 0.65em) // Slightly increased leading for bullet points

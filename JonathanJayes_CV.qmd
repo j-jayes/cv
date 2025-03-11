@@ -29,15 +29,15 @@ author:
 format: awesomecv-typst
 ---
 
-Economics-trained data scientist. I transform raw data into stories. Expertise in using ML/AI to extract value from previously unusable data sources. Demonstrated success in designing and coding pipelines that dramatically reduce costs.
+Economics-trained data scientist. I transform raw data into stories. Expertise in using ML/AI to extract value from previously unusable data sources. Demonstrated success in designing and coding pipelines that dramatically reduce costs. I will graduate with a PhD in Economic History from Lund University in October 2025.
 
 ## Work Experience
 
 ```{=typst}
 #resume-entry-bullets(
-  title: "Data Scientist",
   company_name: "Codera Analytics",
   company_url: "https://codera.co.za/",
+  title: "Data Scientist",
   date: "12/2022 - Present",
   description: "Led various data science projects including a public finance data collection and analysis project:",
   bullets: (
@@ -50,29 +50,27 @@ Economics-trained data scientist. I transform raw data into stories. Expertise i
 )
 
 #resume-entry(
-  title: "Junior Data Scientist",
   company_name: "Fathom Data",
   company_url: "https://fathomdata.dev",
+  title: "Junior Data Scientist",
   date: "01/2022 - 03/2022",
   description: "Created automated reports, worked on commercialization of data products on consumer prices, presented on code that writes itself within automated report pipeline."
 )
 
 #resume-entry(
-  title: "Quantitative Analyst",
   company_name: "University of California, Berkeley",
+  title: "Quantitative Analyst",
   date: "06/2020 - 02/2021",
   description: "Research assistant to Prof. Barry Eichengreen. Conducted NLP analysis for a study on South Africa's Gold Standard and Great Depression."
 )
 
 #resume-entry(
-  title: "Junior Competition Economics Consultant",
   company_name: "FTI Consulting South Africa",
   company_url: "https://www.fticonsulting.com",
+  title: "Junior Competition Economics Consultant",
   date: "03/2019 - 01/2020",
   description: "Led a project on economic impact assessment for an arts festival, contributed to expert reports in telecommunications, oil, and poultry industries. I turned international trade statistics into compelling narratives, using visualizations to communicate industry dynamics."
 )
-
-
 ```
 
 
