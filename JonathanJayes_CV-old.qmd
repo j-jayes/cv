@@ -1,0 +1,119 @@
+---
+title: "Jonathan Jayes' CV"
+author:
+  firstname: Jonathan Alistair
+  lastname: Jayes
+  address: "Södra Esplanaden 36, Lund, 223 52, Sweden"
+  position: "Data Scientist ・ Economic Consultant"
+  contacts:
+    - icon: fa envelope
+      text: j0nathanjayes@gmail.com
+      url: "j0nathanjayes@gmail.com"
+    # - icon: assets/icon/solid-phone.svg
+    #   text: "+46 72 403 8126"
+    - icon: assets/icon/bi-house-fill.svg
+      text: interludeone.com
+      url: https://interludeone.com
+    # - icon: fa brands orcid
+    #   text: 0000-0000-0000-0000
+    #   url: https://orcid.org/0000-0000-0000-0000
+    - icon: fa brands github
+      text: github.com/j-jayes
+      url: https://github.com/j-jayes
+    - icon: fa brands linkedin
+      text: linkedin.com/in/jonathanjayes
+      url: https://linkedin.com/in/jonathanjayes
+    # - icon: fa brands x-twitter
+    #   text: twitter
+    #   url: https://twitter.com/example
+format: awesomecv-typst
+---
+
+Economics-trained data scientist. I am curious about how the world works and skilled at turning data about it into stories. I have developed expertise in using AI to extract value from previously untapped data sources. My work has saved both time and money. I will graduate with a PhD in Economic History from Lund University in October 2025.
+
+## Work Experience
+
+```{=typst}
+#resume-entry-bullets(
+  company_name: "Codera Analytics",
+  company_url: "https://codera.co.za/",
+  title: "Data Scientist",
+  date: "12/2022 - Present",
+  description: "Led various data science projects including a public finance data collection and analysis project:",
+  bullets: (
+    "Executed full project lifecycle: planning, bidding, winning, and delivering a comprehensive pipeline to collect, classify, extract and publish public finance data across the African continent",
+    "Developed and maintained over 60 web scrapers to automatically collect PDF budget documents from government institutions and multilateral organizations",
+    "Created a document classification system using multimodal large language models to accurately categorize heterogeneous financial documents according to a custom classification schema",
+    "Built robust metadata extraction workflows and database architecture to store and organize thousands of documents spanning from 2013 to present",
+    "Designed and implemented an internal dashboard tool enabling clients to visualize data coverage and extract insights from the collected financial information"
+  )
+)
+
+#resume-entry(
+  company_name: "Fathom Data",
+  company_url: "https://fathomdata.dev",
+  title: "Junior Data Scientist",
+  date: "01/2022 - 03/2022",
+  description: "Created automated reports, worked on commercialization of data products on consumer prices, [presented on code that writes itself](https://interludeone.com/posts/2022-03-04-programmatically-generate-tabs-in-rmarkdown/programmatically-generate-tabs-in-rmarkdown) within automated report pipeline."
+)
+
+#resume-entry-bullets(
+  company_name: "FTI Consulting South Africa",
+  company_url: "https://www.fticonsulting.com",
+  title: "Junior Competition Economics Consultant",
+  date: "03/2019 - 01/2020",
+  description: "Supported senior economists on competition cases, trade disputes, and industry assessments while developing my analytical skills:",
+  bullets: (
+    "Contributed to a successful ostrich industry merger case by researching market dynamics across meat, leather, and feather segments, and gained exposure to competition appeals court proceedings",
+    "Developed analytical skills through detailed examination of international trade statistics at 8-digit HS code level for the poultry industry, learning to navigate complex trade agreements like AGOA",
+    "Learned effective data visualization techniques by assisting with analysis of mobile data pricing strategies, gaining insights into market segmentation and consumer welfare considerations",
+    "Built foundational modeling skills through development of an interactive dashboard for alternative palliative care funding scenarios, balancing healthcare cost considerations with patient outcomes"
+  )
+)
+```
+
+
+## Education
+
+```{=typst}
+#resume-entry-bullets(
+  title: "PhD in Economic History",
+  company_name: "Lund University, Sweden",
+  date: "2021 - 2025",
+  description: "Examining winners and losers of technological change during the electrification in the 20th century. Thesis supervised by Prof. Kerstin Enflo.",
+  bullets: (
+    "Leveraged cutting-edge technology (LLMs, computer vision, text embedding models) to make historical data sources accessible at scale that would otherwise be impractical to analyze",
+    "Designed and implemented a novel AI pipeline to transform historical biographical dictionaries into machine-readable format, reducing transcription time by 3 months while significantly expanding the observation set beyond previous studies",
+    "Developed diverse methodological expertise across four thesis papers: systematic literature review, cross-sectional historical census analysis, biographical text data mining, and time-series analysis of corporate director networks"
+  )
+)
+
+#resume-entry-bullets(
+  title: "Masters in Economics",
+  company_name: "Stellenbosch University, South Africa",
+  date: "2020 - 2021",
+  description: "Stellenbosch University. Researcher at the Laboratory for the Economics of Africa's Past.",
+  bullets: (
+    "Submitted 'A Century Later: Lessons from the Spanish Flu Pandemic of 1918' to the South African Presidency",
+    "Graduated with distinction",
+    "Published my first paper in World Development Special Issue on Pandemics"
+  )
+)
+
+#resume-entry(
+  title: "Honours in Economics and Bachelors in Social Science",
+  company_name: "University of Cape Town, South Africa",
+  date: "2015 - 2018",
+  description: "Dean's Merit List. Class medalist in courses on Policy Analysis, Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
+)
+```
+
+
+## Skills
+
+```{=typst}
+#resume-entry(
+  title: "Software and Languages",
+  description: "Software: Python, R, SQL, experience with OpenAI / Gemini / Claude API, Google Cloud Functions, GitHub Actions. Learning: Docker.\nLanguages: English (native), Swedish (B1), French (A2).",
+)
+```

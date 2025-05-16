@@ -9,116 +9,115 @@ author:
     - icon: fa envelope
       text: j0nathanjayes@gmail.com
       url: "j0nathanjayes@gmail.com"
-    # - icon: assets/icon/solid-phone.svg
-    #   text: "+46 72 403 8126"
     - icon: assets/icon/bi-house-fill.svg
       text: interludeone.com
       url: https://interludeone.com
-    # - icon: fa brands orcid
-    #   text: 0000-0000-0000-0000
-    #   url: https://orcid.org/0000-0000-0000-0000
     - icon: fa brands github
-      text: GitHub
+      text: github.com/j-jayes
       url: https://github.com/j-jayes
     - icon: fa brands linkedin
-      text: LinkedIn
+      text: linkedin.com/in/jonathanjayes
       url: https://linkedin.com/in/jonathanjayes
-    # - icon: fa brands x-twitter
-    #   text: twitter
-    #   url: https://twitter.com/example
 format: awesomecv-typst
 ---
 
-Economics-trained data scientist. I transform raw data into stories. Expertise in using ML/AI to extract value from previously unusable data sources. Demonstrated success in designing and coding pipelines that dramatically reduce costs. I will graduate with a PhD in Economic History from Lund University in October 2025.
+PhD candidate in Economic History (Lund University, exp. Oct 2025) combining rigorous economic training (Microeconomics, IO focus) with advanced data science proficiency. Expertise in applying empirical analysis and AI techniques to extract insights from complex data. Seeking a data scientist role to advance my career.
 
 ## Work Experience
 
 ```{=typst}
-#resume-entry-bullets(
+#resume-entry(
   company_name: "Codera Analytics",
-  company_url: "https://codera.co.za/",
+  location: "Lund, Sweden",
   title: "Data Scientist",
   date: "12/2022 - Present",
-  description: "Led various data science projects including a public finance data collection and analysis project:",
+  description: "Led various data science projects, including pitching to clients and managing a team of three",
   bullets: (
-    "Executed full project lifecycle: planning, bidding, winning, and delivering a comprehensive pipeline to collect, classify, extract and publish public finance data across the African continent",
-    "Developed and maintained over 60 web scrapers to automatically collect PDF budget documents from government institutions and multilateral organizations",
-    "Created a document classification system using multimodal large language models to accurately categorize heterogeneous financial documents according to a custom classification schema",
-    "Built robust metadata extraction workflows and database architecture to store and organize thousands of documents spanning from 2013 to present",
-    "Designed and implemented an internal dashboard tool enabling clients to visualize data coverage and extract insights from the collected financial information"
+    "Led the development and successful testing of an AI-powered MVP to automate data extraction from diverse corporate reports, reducing manual processing time by ~80%",
+    "Managed the complete lifecycle of a large-scale public finance data project for Africa, from successful bid to delivery of a structured dataset covering thousands of documents",
+    "Engineered a scalable data pipeline incorporating >60 web scrapers and robust database architecture to systematically collect, process, and store complex public finance documents",
   )
 )
 
 #resume-entry(
   company_name: "Fathom Data",
-  company_url: "https://fathomdata.dev",
+  location: "Lund, Sweden",
   title: "Junior Data Scientist",
   date: "01/2022 - 03/2022",
-  description: "Created automated reports, worked on commercialization of data products on consumer prices, presented on code that writes itself within automated report pipeline."
-)
-
-#resume-entry(
-  company_name: "University of California, Berkeley",
-  title: "Quantitative Analyst",
-  date: "06/2020 - 02/2021",
-  description: "Research assistant to Prof. Barry Eichengreen. Conducted NLP analysis for a study on South Africa's Gold Standard and Great Depression."
+  description: "Contributed to developing a data product analyzing scraped consumer pricing trends",
+  bullets: (
+    "Developed an automated reporting pipeline using SQL and R to analyze scraped consumer pricing and volume discount data; contributed to commercial strategy by identifying potential client segments based on geographic data coverage",
+  )
 )
 
 #resume-entry(
   company_name: "FTI Consulting South Africa",
-  company_url: "https://www.fticonsulting.com",
   title: "Junior Competition Economics Consultant",
+  location: "Cape Town, South Africa",
   date: "03/2019 - 01/2020",
-  description: "Led a project on economic impact assessment for an arts festival, contributed to expert reports in telecommunications, oil, and poultry industries. I turned international trade statistics into compelling narratives, using visualizations to communicate industry dynamics."
+  description: "Supported senior economists on competition cases, trade disputes, and industry assessments while developing my analytical skills:",
+  bullets: (
+    "Drafted sections and compiled supporting evidence (incl. data visualizations) for the economic report on a 2-to-1 ostrich merger, contributing to analyses of market definition and competitive effects.",
+    "Executed detailed analysis of South African poultry imports using 8-digit HS code data in Stata/Excel, identifying key trends in volume and pricing relevant to a trade dispute",
+    "Mapped and analyzed complex mobile data pricing structures across operators, identifying patterns in market segmentation and bundle differentiation to support the team's industry assessment",
+    "Developed an interactive Excel-based dashboard modeling palliative care funding scenarios, quantifying potential cost savings and patient outcome variations"
+  )
 )
+
 ```
 
 
 ## Education
 
 ```{=typst}
-#resume-entry-bullets(
-  title: "PhD in Economic History",
-  company_name: "Lund University, Sweden",
+#education-entry(
+  degree: "PhD in Economic History",
+  institution: "Lund University",
+  subheader: "Planning to defend my thesis in October 2025.",
   date: "2021 - 2025",
-  description: "Examining winners and losers of technological change during the electrification in the 20th century. Thesis supervised by Prof. Kerstin Enflo.",
   bullets: (
-    "Leveraged cutting-edge technology (LLMs, computer vision, text embedding models) to make historical data sources accessible at scale that would otherwise be impractical to analyze",
-    "Designed and implemented a novel AI pipeline to transform historical biographical dictionaries into machine-readable format, reducing transcription time by 3 months while significantly expanding the observation set beyond previous studies",
-    "Developed diverse methodological expertise across four thesis papers: systematic literature review, cross-sectional historical census analysis, biographical text data mining, and time-series analysis of corporate director networks"
+    "Designed and implemented a novel AI pipeline automating the extraction and structuring of data from historical biographical dictionaries, reducing manual transcription time by 3 months",
+    // "Taught a course on Stata skills and map making"
   )
 )
 
-#resume-entry-bullets(
-  title: "Masters in Economics",
-  company_name: "Stellenbosch University, South Africa",
-  date: "2020 - 2021",
-  description: "Stellenbosch University. Researcher at the Laboratory for the Economics of Africa's Past.",
-  bullets: (
-    "Submitted 'A Century Later: Lessons from the Spanish Flu Pandemic of 1918' to the South African Presidency",
-    "Graduated with distinction",
-    "Published my first paper in World Development Special Issue on Pandemics"
-  )
+#education-entry(
+  degree: "Masters in Economics",
+  institution: "Stellenbosch University",
+  subheader: "Graduated with distinction.",
+  date: "2020 - 2021"
 )
 
-#resume-entry(
-  title: "Honours in Economics and Bachelors in Social Science",
-  company_name: "University of Cape Town, South Africa",
-  date: "2015 - 2018",
-  description: "Dean's Merit List. Class medalist in courses on Policy Analysis, Microeconomics, Twentieth Century Industrialization, and Empires and Modernities."
+#education-entry(
+  degree: "Honours in Economics and Bachelors in Social Science",
+  institution: "University of Cape Town",
+  subheader: "Dean's Merit List. Top mark in my year for four courses.",
+  date: "2015 - 2018"
 )
+
 ```
-
 
 ## Skills
 
 ```{=typst}
-#resume-entry(
-  title: "Software",
-  description: "Python, R, SQL, experience with OpenAI / Gemini / Claude API, Google Cloud Functions, GitHub Actions. Learning: Docker."
+#skills-entry(
+  title: "Technical Skills",
+  description: "", // Description field can be empty if using bullets directly
+  bullets: (
+    "Data Analysis and Econometrics: Stata, Python (Pandas, Polars, scikit-learn), R (tidyverse, tidymodels), Advanced Excel, SQL",
+    "AI/LLM Application: Experience using APIs (OpenAI, Gemini, Claude) for automated data structuring",
+    "Cloud & Automation: Google Cloud Functions, AWS Lambda, GitHub Actions",
+    "Currently Learning: Docker",
+  )
 )
-#resume-entry(
+
+#skills-entry(
   title: "Languages",
-  description: "English (Native), Swedish (Intermediate), French (Learning)."
+  description: "English (native), Swedish (B1), French (A2)."
 )
+#skills-entry(
+  title: "Interests",
+  description: "Running, Geoguessr, and international trade."
+)
+
 ```

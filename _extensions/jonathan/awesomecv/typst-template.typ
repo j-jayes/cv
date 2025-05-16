@@ -38,21 +38,20 @@ $endif$
 // Helper functions
 //------------------------------------------------------------------------------
 
-// icon string parser
-
+// Parse icon string - using try-catch-like approach
 #let parse_icon_string(icon_string) = {
-  if icon_string.starts-with("fa ") [
-    #let parts = icon_string.split(" ")
-    #if parts.len() == 2 {
+  if icon_string.starts-with("fa ") {
+    let parts = icon_string.split(" ")
+    if parts.len() == 2 {
       fa-icon(parts.at(1), fill: color-darknight)
     } else if parts.len() == 3 and parts.at(1) == "brands" {
       fa-icon(parts.at(2), fa-set: "Brands", fill: color-darknight)
     } else {
       assert(false, "Invalid fontawesome icon string")
     }
-  ] else if icon_string.ends-with(".svg") [
-    #box(image(icon_string))
-  ] else {
+  } else if icon_string.ends-with(".svg") {
+    box(image(icon_string))
+  } else {
     assert(false, "Invalid icon string")
   }
 }
@@ -68,9 +67,95 @@ $endif$
   return text
 }
 
+// Parse markdown-style links [text](url) into typst links
+#let parse_links(text) = {
+  // If text is not a string, return it unchanged
+  if type(text) != "string" {
+    return text
+  }
+
+  // If no link characters, return immediately
+  if not text.contains("[") or not text.contains("](") {
+    return text
+  }
+
+  // Use a regular expression-like approach with string operations
+  let parts = ()
+  let rest = text
+  let result = ""
+  
+  // Find markdown links of the format [text](url)
+  while rest.contains("[") and rest.contains("](") and rest.contains(")") {
+    // Find opening bracket
+    let start_idx = rest.position("[")
+    
+    // Text before the link
+    let prefix = rest.slice(0, start_idx)
+    result += prefix
+    
+    // Look for matching closing pattern
+    let bracket_count = 1
+    let link_text_start = start_idx + 1
+    let link_text_end = none
+    let looking_for_text = true
+    let url_start = none
+    let url_end = none
+    
+    // Process character by character
+    for i in range(link_text_start, rest.len()) {
+      let char = rest.at(i)
+      
+      if looking_for_text {
+        // Looking for link text portion
+        if char == "[" {
+          bracket_count += 1
+        } else if char == "]" {
+          bracket_count -= 1
+          if bracket_count == 0 and i + 1 < rest.len() and rest.at(i + 1) == "(" {
+            link_text_end = i
+            url_start = i + 2  // Skip "]("
+            looking_for_text = false
+          }
+        }
+      } else {
+        // Looking for URL portion
+        if char == "(" {
+          bracket_count += 1
+        } else if char == ")" {
+          bracket_count -= 1
+          if bracket_count == 0 {
+            url_end = i
+            break
+          }
+        }
+      }
+    }
+    
+    // If we found a complete link pattern
+    if link_text_end != none and url_end != none {
+      let link_text = rest.slice(link_text_start, link_text_end)
+      let url = rest.slice(url_start, url_end)
+      
+      // Now we just add the text without a link since you requested no hyperlinks
+      result += link_text
+      
+      // Update rest to continue processing
+      rest = rest.slice(url_end + 1)
+    } else {
+      // No properly formatted link found, include the opening bracket and continue
+      result += "["
+      rest = rest.slice(start_idx + 1)
+    }
+  }
+  
+  // Add any remaining text
+  result += rest
+  return result
+}
+
 // layout utility
 #let __justify_align(left_body, right_body) = {
-  block(spacing: 0.4em)[
+  block(spacing: 0.3em)[
     #box(width: 3.5fr)[#left_body]
     #box(width: 1.5fr)[
       #align(right)[
@@ -104,7 +189,7 @@ $endif$
 /// - body (content): The body of the right header
 #let secondary-right-header(body) = {
   set text(
-    size: 10pt,
+    size: 10pt, // Increased font size
     weight: "bold",
     style: "normal",
     fill: color-darkgray, // Changed to dark gray for dates
@@ -117,7 +202,7 @@ $endif$
 #let tertiary-right-header(body) = {
   set text(
     weight: "regular",
-    size: 9pt,
+    size: 9pt, // Increased font size
     style: "italic",
     fill: color-accent, // Changed to match the secondary header
   )
@@ -129,12 +214,12 @@ $endif$
 /// - secondary (content): The secondary section of the header
 #let justified-header(primary, secondary) = {
   set block(
-    above: 0.7em, // Increased spacing
-    below: 0.2em,
+    above: 0.7em, // Increased spacing above
+    below: 0.1em, // Kept reduced spacing below
   )
   __justify_align[
     #set text(
-      size: 11pt,
+      size: 12pt, // Increased size further
       weight: "bold",
       fill: color-darkgray,
     )
@@ -150,7 +235,7 @@ $endif$
 #let secondary-justified-header(primary, secondary) = {
   __justify_align[
      #set text(
-      size: 10pt, // Increased for better readability
+      size: 11pt, // Increased size further
       weight: "regular",
       style: "italic",
       fill: color-darkgray,
@@ -170,10 +255,10 @@ $endif$
   lastname: "",
 ) = {
   
-  pad(bottom: 3pt)[
+  pad(bottom: 2pt)[
     #block[
       #set text(
-        size: 28pt, // Better sized header
+        size: 26pt, // Reduced size
         style: "normal",
         font: (font-header),
       )
@@ -187,13 +272,13 @@ $endif$
   position: "",
 ) = {
   set block(
-      above: 0.4em,
-      below: 0.4em,
+      above: 0.3em, // Reduced spacing
+      below: 0.3em, // Reduced spacing
     )
   
   set text(
     color-accent, // Dark blue as per request
-    size: 9pt,
+    size: 10pt, // Increased font size
     weight: "regular",
   )
     
@@ -206,12 +291,12 @@ $endif$
   address: ""
 ) = {
   set block(
-      above: 0.3em,
-      below: 0.3em,
+      above: 0.2em, // Reduced spacing
+      below: 0.2em, // Reduced spacing
   )
   set text(
     color-lightgray,
-    size: 8pt,
+    size: 9pt, // Increased font size
     style: "italic",
   )
 
@@ -222,18 +307,18 @@ $endif$
   contacts: (),
 ) = {
   let separator = box(width: 2pt)
-  if(contacts.len() > 1) {
+  if contacts != none and contacts.len() > 0 {
     block[
       #set text(
-        size: 8pt,
+        size: 9pt, // Increased font size
         weight: "regular",
         style: "normal",
       )
       #align(horizon)[
-        #for contact in contacts [
-          #set box(height: 8pt)
+        #for (i, contact) in contacts.enumerate() [
+          #set box(height: 9pt) // Increased height
           #box[#parse_icon_string(contact.icon) #link(contact.url)[#contact.text]]
-          #separator
+          #if i < contacts.len() - 1 [#separator]
         ]
       ]
     ]
@@ -312,102 +397,140 @@ $endif$
 }
 
 //------------------------------------------------------------------------------
-// Resume Entries
+// New Resume Entries - Formatted like the example
 //------------------------------------------------------------------------------
 
 #let resume-item(body) = {
   set text(
-    size: 10pt, // Larger size to match description
+    size: 10pt, // Increased size to match base
     style: "normal",
     weight: "light",
     fill: color-darknight,
   )
-  set par(leading: 0.65em) // Better line spacing
-  set list(indent: 0.8em, spacing: 0.4em) // Better list spacing
+  set par(leading: 0.7em, justify: true) // Increased paragraph spacing
+  set list(indent: 0.8em, spacing: 0.5em) // Increased list spacing
   body
 }
 
-// Create a special clickable company name with visual indicator
-#let company_with_link(name, url) = {
-  if url != "" {
-    link(url)[
-      #set text(
-        fill: color-darkgray,
-        weight: "bold",
-      )
-      #box[
-        #name #h(2pt) #text(size: 7pt, fill: color-accent)[↗]
-      ]
-    ]
-  } else {
-    set text(
-      weight: "bold",
-    )
-    name
-  }
-}
-
-// Modified with company_name as bold and title as italic underneath
+// New experience entry format based on your example
 #let resume-entry(
-  title: none,
+  company_name: "",
+  location: "", 
+  title: "",
   date: "",
   description: "",
-  company_name: "",
-  company_url: "",
+  bullets: (),
 ) = {
-  block(spacing: 0.1em)[
-    // Company name bold at the top left, date bold at top right
+  block(spacing: 0em, below: 1.2em)[  // Increased spacing below each entry
+    // Company name bold at the top left, location bold at top right
     #justified-header(
-      company_with_link(parse_italics(company_name), company_url),
-      date
+      [#company_name],
+      [#location]
     )
     
-    // Job title in italics underneath company name
-    #block(below: 0.6em)[
-      #set text(
-        size: 10pt,
-        style: "italic",
-        weight: "regular",
-        fill: color-darkgray,
-      )
-      #title
-    ]
+    // Added space after company name
+    #v(0.2em)
+    
+    // Job title in italics on left, date on right
+    #secondary-justified-header(
+      [#title],
+      [#date]
+    )
+    
+    // Added space after title
+    #v(0.3em)
     
     // Description with consistent text styling
     #if description != "" [
-      #block(above: 0.2em, below: 0.2em)[
+      #block(above: 0.3em, below: 0.4em)[  // Increased spacing around description
         #set text(
-          size: 10pt,
+          size: 10pt, // Increased size to match base
           style: "normal",
           weight: "regular",
           fill: color-darknight,
         )
-        #parse_italics(description)
+        #parse_links(parse_italics(description))
+      ]
+    ]
+    
+    // Bullet points if provided
+    #if bullets != none and bullets.len() > 0 [
+      #block(above: 0.3em)[  // Increased padding before bullet points
+        #set text(
+          size: 8.5pt, // Further reduced bullet point size
+          style: "normal",
+          weight: "regular",
+          fill: color-darknight,
+        )
+        #set par(leading: 0.55em, justify: true) // Justified bullet points text
+        #list(
+          ..bullets.map(item => parse_links(parse_italics(item))),
+          indent: 0.7em,
+          spacing: 0.3em // Reduced bullet point spacing
+        )
       ]
     ]
   ]
 }
 
-// Modified bullets function with company name bold at top and job title underneath in italics
-#let resume-entry-bullets(
-  title: none,
+// New education entry format matching the experience entry
+#let education-entry(
+  degree: "",
+  institution: "",
+  subheader: "",
   date: "",
-  description: "",
   bullets: (),
-  company_name: "",
-  company_url: "",
 ) = {
-  block(spacing: 0.1em)[
-    // Company name bold at the top left, date bold at top right
+  block(spacing: 0em, below: 1.2em)[  // Increased spacing below each entry
+    // Degree name bold at the top left, institution bold at top right
     #justified-header(
-      company_with_link(parse_italics(company_name), company_url),
-      date
+      [#degree],
+      [#institution]
     )
     
-    // Job title in italics underneath company name
+    // Added space after degree
+    #v(0.2em)
+    
+    // Subheader on left, date on right
+    #secondary-justified-header(
+      [#subheader],
+      [#date]
+    )
+    
+    // Added space after subheader
+    #v(0.3em)
+    
+    // Bullet points if provided
+    #if bullets != none and bullets.len() > 0 [
+      #block(above: 0.4em)[  // Increased padding before bullet points
+        #set text(
+          size: 8.5pt, // Further reduced bullet point size
+          style: "normal",
+          weight: "regular",
+          fill: color-darknight,
+        )
+        #set par(leading: 0.55em, justify: true) // Justified bullet points text
+        #list(
+          ..bullets.map(item => parse_links(parse_italics(item))),
+          indent: 0.7em,
+          spacing: 0.3em // Reduced bullet point spacing
+        )
+      ]
+    ]
+  ]
+}
+
+// For Skills section (kept the same as you had it)
+#let skills-entry(
+  title: none,
+  description: "",
+  bullets: (),
+) = {
+  block(spacing: 0em, below: 0.6em)[  // Adjusted spacing for skills entries
+    // Skills title in italics
     #block(below: 0.3em)[
       #set text(
-        size: 10pt,
+        size: 11pt, // Increased font size
         style: "italic",
         weight: "regular",
         fill: color-darkgray,
@@ -417,30 +540,31 @@ $endif$
     
     // Description with consistent text styling
     #if description != "" [
-      #block(above: 0.2em, below: 0.2em)[
+      #block(above: 0.2em, below: 0.3em)[
         #set text(
-          size: 10pt,
+          size: 10pt, // Increased to match base
           style: "normal",
           weight: "regular",
           fill: color-darknight,
         )
-        #parse_italics(description)
+        #parse_links(parse_italics(description))
       ]
     ]
     
-    #if bullets.len() > 0 [
+    // Added bullet points support
+    #if bullets != none and bullets.len() > 0 [
       #block(above: 0.3em)[
         #set text(
-          size: 10pt,
+          size: 8.5pt, // Same size as base font
           style: "normal",
           weight: "regular",
           fill: color-darknight,
         )
-        #set par(leading: 0.65em) // Slightly increased leading for bullet points
+        #set par(leading: 0.7em, justify: true) // Consistent with other bullet points
         #list(
-          ..bullets.map(item => [#parse_italics(item)]),
+          ..bullets.map(item => parse_links(parse_italics(item))),
           indent: 0.8em,
-          spacing: 0.4em // Increased bullet point spacing
+          spacing: 0.5em // Same spacing as other bullet points
         )
       ]
     ]
@@ -466,18 +590,23 @@ $endif$
   
   set text(
     font: (font-text),
-    size: 10pt, // Better base font size
+    size: 10pt, // Increased base font size from 9pt to 10pt
     fill: color-darkgray,
     fallback: true,
   )
   
+  set par(
+    leading: 0.7em, // Increased paragraph spacing
+    justify: true    // Justify all text
+  )
+  
   set page(
     paper: "a4",
-    margin: (left: 18mm, right: 18mm, top: 10mm, bottom: 10mm), // Increased margins for more professional look
+    margin: (left: 16mm, right: 16mm, top: 8mm, bottom: 8mm), // Reduced margins
     footer: [
       #set text(
         fill: color-accent, // Footer in accent color
-        size: 7.5pt, // Slightly increased size
+        size: 7pt, // Reduced size
       )
       #__justify_align_3[
         #smallcaps[#date]
@@ -494,9 +623,6 @@ $endif$
     ],
   )
   
-  // set paragraph spacing
-  set par(leading: 0.6em) // Better paragraph spacing
-  
   set heading(
     numbering: none,
     outlined: false,
@@ -504,11 +630,11 @@ $endif$
   
   show heading.where(level: 1): it => [
     #set block(
-      above: 1.2em, // Increased for better spacing
-      below: 0.8em, // Increased for better spacing
+      above: 1.4em, // Further increased spacing above section headings
+      below: 0.8em, // Increased spacing below section headings
     )
     #set text(
-      size: 14pt,
+      size: 15pt, // Increased size further
       weight: "regular",
       fill: color-accent, // Full heading in dark blue
     )
@@ -522,7 +648,7 @@ $endif$
   show heading.where(level: 2): it => {
     set text(
       color-middledarkgray,
-      size: 11pt,
+      size: 10pt, // Reduced size
       weight: "thin"
     )
     it.body
@@ -530,7 +656,7 @@ $endif$
   
   show heading.where(level: 3): it => {
     set text(
-      size: 9pt,
+      size: 8pt, // Reduced size
       weight: "regular",
       fill: color-gray,
     )

@@ -16,9 +16,6 @@ In my work at Codera, I want you to explain the project that I delivered:
 * extracting metadata about these documents and storing this in a database
 * Creating an internal tool for the client to understand the coverage of the data that they have collected since 2013 to the present day.
 
-
-
-
 // #resume-entry(
 
 //   title: "Financial Director and Debating Coach",
@@ -30,9 +27,6 @@ In my work at Codera, I want you to explain the project that I delivered:
 //   description: "Thethani Debating League. Managed budgets, organized tournaments, and coached debating workshops. Awarded Investec UCT Student Leadership Awards."
 
 // )
-
-
-
 
 // #resume-entry(
 
@@ -58,9 +52,33 @@ In my work at Codera, I want you to explain the project that I delivered:
 
 // )
 
+#resume-entry(
+
+company_name: "University of California, Berkeley",
+
+title: "Quantitative Analyst",
+
+date: "06/2020 - 02/2021",
+
+description: "Research assistant to Prof. Barry Eichengreen. Conducted NLP analysis for a study on South Africa's Gold Standard and Great Depression."
+
+)
 
 
 
+#resume-entry(
+
+company_name: "FTI Consulting South Africa",
+
+company_url: "https://www.fticonsulting.com",
+
+title: "Junior Competition Economics Consultant",
+
+date: "03/2019 - 01/2020",
+
+description: "Led a project on economic impact assessment for an arts festival, contributed to expert reports in telecommunications, oil, and poultry industries. I turned international trade statistics into compelling narratives, using visualizations to communicate industry dynamics."
+
+)
 
 <!-- ## Publications
 
@@ -93,8 +111,6 @@ In my work at Codera, I want you to explain the project that I delivered:
 
 
 ``` -->
-
-
 
 <!-- ## Interests
 
