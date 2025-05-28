@@ -1,0 +1,126 @@
+---
+title: "Jonathan Jayes' CV"
+author:
+  firstname: Jonathan Alistair
+  lastname: Jayes
+  address: "Södra Esplanaden 36, Lund, 223 52, Sweden"
+  position: "Data Scientist ・ Economic Consultant"
+  contacts:
+    - icon: fa envelope
+      text: j0nathanjayes@gmail.com
+      url: "j0nathanjayes@gmail.com"
+    - icon: assets/icon/bi-house-fill.svg
+      text: interludeone.com
+      url: https://interludeone.com
+    - icon: fa brands github
+      text: github.com/j-jayes
+      url: https://github.com/j-jayes
+    - icon: fa brands linkedin
+      text: linkedin.com/in/jonathanjayes
+      url: https://linkedin.com/in/jonathanjayes
+format: awesomecv-typst
+---
+
+Analytical and results-oriented Data Scientist with a PhD background (defending Oct 2025), passionate about leveraging machine learning and data to drive innovation in sustainable transport. Known for leading projects to develop end-to-end AI-driven data solutions, from complex data acquisition and pipeline architecture to delivering significant efficiency gains. Seeking to contribute to Einride’s pioneering work in electric and autonomous freight.
+
+## Work Experience
+
+```{=typst}
+#resume-entry(
+  company_name: "Codera Analytics",
+  location: "Lund, Sweden",
+  title: "Data Scientist",
+  date: "12/2022 - Present",
+  description: "Led various data science projects, including managing clients and overseeing a team of three",
+  bullets: (
+    "Led the development and successful testing of an AI-powered end-to-end solution in ML to automate data extraction from diverse corporate reports, reducing manual processing time by ~80%",
+    "Managed the complete lifecycle of a large-scale public finance data project for Africa, from successful bid to delivery of a structured dataset covering thousands of documents",
+    "Developed and implemented an SDMX-compliant ingestion pipeline for South African Reserve Bank (SARB) and National Treasury financial statistics, utilising Python for ETL processes  and SQL for rigorous data validation, ultimately making key verified datasets publicly available on the Codera Analytics platform.",
+    "Engineered a scalable data pipeline incorporating >60 web scrapers and robust database architecture to systematically collect, process, and store complex public finance documents in Africa",
+  )
+)
+
+#resume-entry(
+  company_name: "Fathom Data",
+  location: "Lund, Sweden",
+  title: "Junior Data Scientist",
+  date: "01/2022 - 03/2022",
+  description: "Contributed to developing a data product analyzing scraped consumer pricing trends",
+  bullets: (
+    "Developed an automated reporting pipeline using SQL and R to analyze scraped consumer pricing and volume discount data; contributed to commercial strategy by identifying potential client segments based on geographic data coverage",
+  )
+)
+
+// #resume-entry(
+//   company_name: "FTI Consulting South Africa",
+//   title: "Junior Competition Economics Consultant",
+//   location: "Cape Town, South Africa",
+//   date: "03/2019 - 01/2020",
+//   description: "Supported senior economists on competition cases, trade disputes, and industry assessments while developing my analytical skills:",
+//   bullets: (
+//     "Drafted sections and compiled supporting evidence (incl. data visualizations) for the economic report on a 2-to-1 ostrich merger, contributing to analyses of market definition and competitive effects.",
+//     "Executed detailed analysis of South African poultry imports using 8-digit HS code data in Stata/Excel, identifying key trends in volume and pricing relevant to a trade dispute",
+//     "Mapped and analyzed complex mobile data pricing structures across operators, identifying patterns in market segmentation and bundle differentiation to support the team's industry assessment",
+//     "Developed an interactive Excel-based dashboard modeling palliative care funding scenarios, quantifying potential cost savings and patient outcome variations"
+//   )
+// )
+
+```
+
+
+## Education
+
+```{=typst}
+#education-entry(
+  degree: "PhD in Economic History",
+  institution: "Lund University",
+  subheader: "Planning to defend my thesis in October 2025.",
+  date: "2021 - 2025",
+  bullets: (
+    "Designed and implemented a novel AI pipeline automating the extraction and structuring of data from historical biographical dictionaries, reducing manual transcription time by 3 months",
+    "Applied Natural Language Processing (NLP) techniques for analyzing biographical dictionary data to study skilled labor origins and career trajectories.",
+    "Compiled and processed large-scale historical datasets, involving digitization, data cleaning, geocoding, and the use of classification schemes (HISCO, HISCLASS) for occupational data.",
+    "Taught a course on Stata skills and map making"
+  )
+)
+
+#education-entry(
+  degree: "Masters in Economics",
+  institution: "Stellenbosch University",
+  subheader: "Graduated with distinction.",
+  date: "2020 - 2021"
+)
+
+#education-entry(
+  degree: "Honours in Economics and Bachelors in Social Science",
+  institution: "University of Cape Town",
+  subheader: "Dean's Merit List. Top mark in my year for four courses.",
+  date: "2015 - 2018"
+)
+
+```
+
+## Skills
+
+```{=typst}
+#skills-entry(
+  title: "Technical Skills",
+  description: "", // Description field can be empty if using bullets directly
+  bullets: (
+    "Data Analysis and Econometrics: Stata, Python (Pandas, Polars, scikit-learn), R (tidyverse, tidymodels), Advanced Excel, SQL",
+    "AI/LLM Application: Experience using APIs (OpenAI, Gemini, Claude) for automated data structuring",
+    "Cloud & Automation: Google Cloud Functions, AWS Lambda, GitHub Actions",
+    "Currently Learning: Docker",
+  )
+)
+
+#skills-entry(
+  title: "Languages",
+  description: "English (native), Swedish (B1), French (A2)."
+)
+#skills-entry(
+  title: "Interests",
+  description: "Running, Geoguessr, and international trade."
+)
+
+```

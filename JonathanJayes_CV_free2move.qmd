@@ -1,0 +1,123 @@
+---
+title: "Jonathan Jayes' CV"
+author:
+  firstname: Jonathan Alistair
+  lastname: Jayes
+  address: "Södra Esplanaden 36, Lund, 223 52, Sweden"
+  position: "Data Scientist ・ Economic Consultant"
+  contacts:
+    - icon: fa envelope
+      text: j0nathanjayes@gmail.com
+      url: "mailto:j0nathanjayes@gmail.com" 
+    - icon: assets/icon/bi-house-fill.svg
+      text: interludeone.com
+      url: https://interludeone.com
+    - icon: fa brands github
+      text: github.com/j-jayes
+      url: https://github.com/j-jayes
+    - icon: fa brands linkedin
+      text: linkedin.com/in/jonathanjayes
+      url: https://linkedin.com/in/jonathanjayes
+format: awesomecv-typst
+---
+
+<!-- Results-oriented Data Scientist and PhD candidate with 4 years of experience leveraging AI and robust data pipelines to solve complex business problems. Proven expertise in Python, advanced statistical analysis, ML/LLMs, and ETL development, with a strong grasp of software engineering principles and a focus on ideation, prototyping, and algorithm development. Eager to contribute to Zeta Global's next-generation identity technology. -->
+
+Highly analytical Data Scientist and PhD candidate with 4 years of experience designing and implementing AI-driven solutions and robust data systems. Passionate about translating complex real-world problems into mathematical models and easy to use software. 
+
+## Work Experience
+
+```{=typst}
+#resume-entry(
+  company_name: "Codera Analytics",
+  location: "Lund, Sweden",
+  title: "Data Scientist",
+  date: "12/2022 - Present",
+  description: "Led various data science projects, including managing clients and overseeing a team of three ",
+  bullets: (
+    "Led the development and successful testing of an AI-powered MVP (leveraging LLMs) to automate data extraction from diverse corporate reports, reducing manual processing time by ~80% and delivering a scalable solution for the client ",
+    "Managed the complete lifecycle of a large-scale public finance data project for Africa, from successful bid to delivery of a structured dataset and ETL pipelines for thousands of documents, enabling enhanced data accessibility and analysis ",
+    "Engineered a scalable data pipeline incorporating >60 web scrapers, automated classification (using multimodal LLMs), and robust SQL/NoSQL database architecture to systematically collect, process, and store complex public finance documents ",
+  )
+)
+
+#resume-entry(
+  company_name: "Fathom Data",
+  location: "Lund, Sweden",
+  title: "Junior Data Scientist",
+  date: "01/2022 - 03/2022",
+  description: "Contributed to developing a data product analyzing scraped consumer pricing trends ",
+  bullets: (
+    "Developed an automated reporting pipeline using SQL and R to analyze scraped consumer pricing and volume discount data, directly informing commercial strategy through identification of client segments and market opportunities ",
+  )
+)
+
+#resume-entry(
+  company_name: "FTI Consulting South Africa",
+  title: "Junior Competition Economics Consultant",
+  location: "Cape Town, South Africa",
+  date: "03/2019 - 01/2020",
+  description: "Supported senior economists by performing rigorous quantitative analysis, developing data visualizations, and building models to address complex competition, trade, and pricing challenges for major clients.",
+  bullets: (
+    "Conducted econometric analysis and created data visualizations for a major merger case, assessing market definition and competitive effects to support regulatory approval ",
+    "Executed detailed analysis of South African poultry import data (8-digit HS code) using Stata, SQL and Excel, identifying key trends in volume and pricing to inform trade dispute strategies ",
+    "Analyzed complex mobile data pricing structures and customer segmentation for telecommunications operators, building models to identify patterns and inform optimal pricing strategies ",
+    // "Developed an interactive Excel-based dashboard for modeling healthcare funding scenarios, quantifying cost savings and patient outcomes to facilitate stakeholder decision-making (demonstrating aptitude for BI and impact visualization) ",
+  )
+)
+
+```
+
+## Education
+
+```{=typst}
+#education-entry(
+  degree: "PhD in Economic History",
+  institution: "Lund University",
+  subheader: "Planning to defend my thesis in October 2025. ",
+  date: "2021 - 2025",
+  bullets: (
+    "Designed and implemented a novel AI pipeline automating the extraction and structuring of data from historical biographical dictionaries, reducing manual transcription time by 3 months ",
+  )
+)
+
+#education-entry(
+  degree: "Masters in Economics",
+  institution: "Stellenbosch University",
+  subheader: "Graduated with distinction. ",
+  date: "2020 - 2021"
+)
+
+#education-entry(
+  degree: "Honours in Economics and Bachelors in Social Science",
+  institution: "University of Cape Town",
+  subheader: "Dean's Merit List. Top mark in my year for four courses. ",
+  date: "2015 - 2018"
+)
+```
+
+## Skills
+
+```{=typst}
+
+#skills-entry(
+  title: "Data Science & Engineering Proficiencies",
+  description: "", 
+  bullets: (
+    "Programming & Algorithms: Python (Expert; incl. Pandas, Polars, scikit-learn, NumPy, SciPy, Matplotlib – PyLab suite proficiency), SQL (Expert), R (tidyverse, tidymodels), Algorithm Design & Heuristics",
+    "AI/ML & Statistics: AI/LLM Application (OpenAI, Gemini, Claude APIs for automated data structuring & classification), Machine Learning (incl. experience relevant to probabilistic approaches & model formalism), Classical Statistics (hypothesis testing, confidence intervals), Data Mining",
+    "Data Processing & ETL: ETL Development, Data Pipeline Engineering, Database Management (SQL & NoSQL concepts, database architecture), Data Reporting & Ad-hoc Analysis (Python/SQL, experience with cloud data platforms e.g., GCP; quick to learn tools like Athena, Google BigQuery)",
+    // "Software Engineering Practices: Version Control (Git/GitHub Actions), Agile/Prototyping Methodologies, Cloud & Automation (Google Cloud Functions, AWS Lambda)",
+    // "Currently Learning: Docker (for MLOps and deployment)",
+  )
+)
+
+#skills-entry(
+  title: "Languages",
+  description: "English (native), Swedish (B1), French (A2)."
+)
+#skills-entry(
+  title: "Interests",
+  description: "Running, Geoguessr and international trade"
+)
+```

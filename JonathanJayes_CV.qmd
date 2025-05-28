@@ -21,7 +21,7 @@ author:
 format: awesomecv-typst
 ---
 
-PhD candidate in Economic History (Lund University, exp. Oct 2025) combining rigorous economic training (Microeconomics, IO focus) with advanced data science proficiency. Expertise in applying empirical analysis and AI techniques to extract insights from complex data. Seeking a data scientist role to advance my career.
+Data Scientist and PhD in Economic History, combining rigorous economic training (Microeconomics, IO focus) with advanced data science proficiency. Expertise in applying empirical analysis and AI techniques to extract insights from complex data. Seeking a role as a database content manager at the OECD to leverage my skills in data structuring and analysis. 
 
 ## Work Experience
 
@@ -31,7 +31,7 @@ PhD candidate in Economic History (Lund University, exp. Oct 2025) combining rig
   location: "Lund, Sweden",
   title: "Data Scientist",
   date: "12/2022 - Present",
-  description: "Led various data science projects, including pitching to clients and managing a team of three",
+  description: "Led various data science projects, including managing clients and overseeing a team of three",
   bullets: (
     "Led the development and successful testing of an AI-powered MVP to automate data extraction from diverse corporate reports, reducing manual processing time by ~80%",
     "Managed the complete lifecycle of a large-scale public finance data project for Africa, from successful bid to delivery of a structured dataset covering thousands of documents",
