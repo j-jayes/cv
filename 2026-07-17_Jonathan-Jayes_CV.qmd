@@ -1,0 +1,145 @@
+---
+title: "Jonathan Jayes' CV"
+author:
+  firstname: Jonathan Alistair
+  lastname: Jayes
+  address: "Based in Malmö, Sweden."
+  position: "Data Scientist ・ Development Researcher"
+  contacts:
+    - icon: fa envelope
+      text: j0nathanjayes@gmail.com
+      url: "j0nathanjayes@gmail.com"
+    - icon: assets/icon/bi-house-fill.svg
+      text: interludeone.com
+      url: https://interludeone.com
+    - icon: fa brands github
+      text: github.com/j-jayes
+      url: https://github.com/j-jayes
+    - icon: fa brands linkedin
+      text: linkedin.com/in/jonathanjayes
+      url: https://linkedin.com/in/jonathanjayes
+format:
+  awesomecv-typst:
+    font-paths:
+      - fonts
+---
+
+A Sub-Saharan African national and recent Ph.D. graduate in Economic History, I bring five years of experience building production-grade AI and data systems across Europe to a deeply personal commitment to development on the African continent. Born in southern Africa and raised across Eswatini, Zambia, and South Africa, I have seen first-hand how data — and the absence of it — shapes economic opportunity. From deploying NLP pipelines that help workers claim fair wages, to digitising African public finance records that were previously inaccessible to researchers, I have consistently used technology to expand access to information. I am eager to bring these skills to the World Bank's mission of reducing poverty and increasing shared prosperity, and to invest in the next generation of African researchers and policymakers.
+
+## Work Experience
+
+```{=typst}
+#resume-entry(
+  company_name: "Nexer Insight",
+  location: "Malmö, Sweden",
+  title: "Data Scientist",
+  date: "2025 - Present",
+  description: "Deliver production AI systems for clients across labour markets, legal services, and environmental compliance; lead a team of three and mentor junior colleagues.",
+  bullets: (
+    "Architected and deployed a production RAG system — now live on the website of Sweden's largest labour union — that enables members to query salary statistics sourced from Statistics Sweden (SCB) through a custom web interface, empowering workers with data-driven benchmarks before salary negotiations.",
+    "Led a sprint to redesign the data-ingestion pipeline for an AI legal chatbot serving 800 lawyers across Sweden: benchmarked chunking strategies and OCR models to maximise throughput at low cost; the solution, built on Google's Agent Development Kit with a React frontend, is being scaled to serve lawyers across the European Union.",
+    "Developed a green-claim identification system for a major Swedish garden products and lawnmower manufacturer, applying NLP to detect potential greenwashing across multi-channel advertising campaigns and verify compliance with incoming EU environmental marketing regulations.",
+    "Designed and delivered a Microsoft Copilot Studio workshop series for 40 municipal workers at a large south-Swedish utility company, equipping them with the skills to build and deploy AI agents in business-critical workflows.",
+    "Managed a delivery team of three data scientists and mentored an intern through applied machine learning projects, combining technical coaching with project management to ensure on-time, high-quality delivery.",
+  )
+)
+
+#resume-entry(
+  company_name: "Codera Analytics",
+  location: "Lund, Sweden (Remote)",
+  title: "Full Stack Data Scientist",
+  date: "2022 - 2025",
+  description: "Led data science projects spanning AI automation, African public finance, and large-scale data infrastructure.",
+  bullets: (
+    "Led the development and successful deployment of an AI-powered end-to-end pipeline to automate data extraction from diverse corporate reports, reducing manual processing time by ~80%.",
+    "Managed the complete lifecycle of a large-scale public finance data project for Africa, from successful bid to delivery of a structured dataset covering 2,700+ documents.",
+    "Developed and implemented an SDMX-compliant ingestion pipeline for South African Reserve Bank (SARB) and National Treasury financial statistics, utilising Python for ETL and SQL for data validation, making key verified datasets publicly available on the Codera Analytics platform.",
+    "Engineered a scalable data pipeline incorporating >60 web scrapers and robust database architecture to systematically collect, process, and store complex public finance documents across Africa.",
+  )
+)
+
+#resume-entry(
+  company_name: "Fathom Data",
+  location: "Lund, Sweden",
+  title: "Junior Data Scientist",
+  date: "Summer 2022",
+  description: "Developed a data product analyzing scraped consumer pricing trends.",
+  bullets: (
+    "Developed an automated reporting pipeline using SQL and R to analyse consumer pricing trends from scraped web data, generating insights that informed commercial strategy and identification of potential client segments.",
+  )
+)
+
+// #resume-entry(
+//   company_name: "FTI Consulting South Africa",
+//   title: "Junior Competition Economics Consultant",
+//   location: "Cape Town, South Africa",
+//   date: "03/2019 - 01/2020",
+//   description: "Supported senior economists on competition cases, trade disputes, and industry assessments.",
+//   bullets: (
+//     "Drafted sections and compiled supporting evidence for the economic report on a 2-to-1 ostrich merger, contributing to analyses of market definition and competitive effects.",
+//     "Executed detailed analysis of South African poultry imports using 8-digit HS code data in Stata/Excel, identifying key trends in volume and pricing relevant to a trade dispute.",
+//     "Mapped and analysed complex mobile data pricing structures across operators, identifying patterns in market segmentation and bundle differentiation.",
+//     "Developed an interactive Excel-based dashboard modelling palliative care funding scenarios, quantifying potential cost savings and patient outcome variations."
+//   )
+// )
+
+```
+
+
+## Education
+
+```{=typst}
+#education-entry(
+  degree: "PhD in Economic History",
+  institution: "Lund University",
+  subheader: "Defended October 2025.",
+  date: "2021 - 2025",
+  bullets: (
+    "Designed and implemented a novel AI pipeline automating the extraction and structuring of data from historical biographical dictionaries, reducing manual transcription time by three months.",
+    "Applied NLP techniques to biographical data to study skilled labour origins and career trajectories in historical Sweden, contributing to the evidence base on long-run human capital development.",
+    "Compiled and processed large-scale historical datasets involving digitisation, data cleaning, geocoding, and the use of international classification schemes (HISCO, HISCLASS) for occupational data.",
+    "Taught courses on quantitative methods, Stata, and map-making; deeply committed to data literacy as a tool for broadening access to evidence-based reasoning.",
+  )
+)
+
+#education-entry(
+  degree: "Masters in Economics",
+  institution: "Stellenbosch University",
+  subheader: "Graduated with distinction.",
+  date: "2020 - 2021"
+)
+
+#education-entry(
+  degree: "Honours in Economics and Bachelors in Social Science",
+  institution: "University of Cape Town",
+  subheader: "Dean's Merit List. Top mark in my year for four courses.",
+  date: "2015 - 2018"
+)
+
+```
+
+## Skills
+
+```{=typst}
+#skills-entry(
+  title: "Technical Skills",
+  description: "",
+  bullets: (
+    "Data Analysis and Econometrics: Python (Pandas, Polars, scikit-learn), R (tidyverse, tidymodels), Advanced Excel, SQL, Stata",
+    "Machine Learning & AI: NLP, Retrieval-Augmented Generation (RAG), LLM APIs (OpenAI, Gemini, Claude), Google Agent Development Kit (ADK), scikit-learn",
+    "Cloud & Infrastructure: AWS (Lambda), Google Cloud (Functions, Firebase), Docker, Git, GitHub Actions (CI/CD)",
+    "Web: React, TypeScript (working knowledge)",
+  )
+)
+
+#skills-entry(
+  title: "Languages",
+  description: "English (native), Swedish (B2), French (A2)."
+)
+
+#skills-entry(
+  title: "Interests",
+  description: "Running, Geoguessr, international trade, and African economic history."
+)
+
+```

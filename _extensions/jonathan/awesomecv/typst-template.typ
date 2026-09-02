@@ -1,4 +1,4 @@
-#import "@preview/fontawesome:0.1.0": *
+#import "@preview/fontawesome:0.5.0": *
 
 //------------------------------------------------------------------------------
 // Style
@@ -13,8 +13,8 @@
 
 // Default style
 #let color-accent-default = rgb("#1a365d") // Dark blue instead of red
-#let font-header-default = ("Montserrat", "Arial", "Helvetica", "Dejavu Sans") // Bold sans serif
-#let font-text-default = ("Lato", "Arial", "Helvetica", "Dejavu Sans") // Lato as requested
+#let font-header-default = ("Montserrat", "Arial") // Bold sans serif
+#let font-text-default = ("Lato", "Arial") // Lato as requested
 #let align-header-default = center
 
 // User defined style
@@ -45,7 +45,7 @@ $endif$
     if parts.len() == 2 {
       fa-icon(parts.at(1), fill: color-darknight)
     } else if parts.len() == 3 and parts.at(1) == "brands" {
-      fa-icon(parts.at(2), fa-set: "Brands", fill: color-darknight)
+      fa-icon(parts.at(2), fill: color-darknight)
     } else {
       assert(false, "Invalid fontawesome icon string")
     }
@@ -70,7 +70,7 @@ $endif$
 // Parse markdown-style links [text](url) into typst links
 #let parse_links(text) = {
   // If text is not a string, return it unchanged
-  if type(text) != "string" {
+  if type(text) != str {
     return text
   }
 
@@ -255,12 +255,12 @@ $endif$
   lastname: "",
 ) = {
   
-  pad(bottom: 2pt)[
+  pad(bottom: 6pt)[
     #block[
       #set text(
         size: 26pt, // Reduced size
         style: "normal",
-        font: (font-header),
+        font: font-header,
       )
       #text(fill: color-gray, weight: "thin")[#firstname]
       #text(weight: "bold")[#lastname]
@@ -272,8 +272,8 @@ $endif$
   position: "",
 ) = {
   set block(
-      above: 0.3em, // Reduced spacing
-      below: 0.3em, // Reduced spacing
+      above: 0.6em,
+      below: 0.5em,
     )
   
   set text(
@@ -291,8 +291,8 @@ $endif$
   address: ""
 ) = {
   set block(
-      above: 0.2em, // Reduced spacing
-      below: 0.2em, // Reduced spacing
+      above: 0.5em,
+      below: 0.5em,
   )
   set text(
     color-lightgray,
@@ -308,7 +308,7 @@ $endif$
 ) = {
   let separator = box(width: 2pt)
   if contacts != none and contacts.len() > 0 {
-    block[
+    block(above: 0.6em)[
       #set text(
         size: 9pt, // Increased font size
         weight: "regular",
@@ -421,7 +421,7 @@ $endif$
   description: "",
   bullets: (),
 ) = {
-  block(spacing: 0em, below: 1.2em)[  // Increased spacing below each entry
+  block(spacing: 0em, below: 1.2em, breakable: false)[
     // Company name bold at the top left, location bold at top right
     #justified-header(
       [#company_name],
@@ -442,9 +442,9 @@ $endif$
     
     // Description with consistent text styling
     #if description != "" [
-      #block(above: 0.3em, below: 0.4em)[  // Increased spacing around description
+      #block(above: 0.3em, below: 0.4em)[
         #set text(
-          size: 10pt, // Increased size to match base
+          size: 10pt,
           style: "normal",
           weight: "regular",
           fill: color-darknight,
@@ -455,18 +455,18 @@ $endif$
     
     // Bullet points if provided
     #if bullets != none and bullets.len() > 0 [
-      #block(above: 0.3em)[  // Increased padding before bullet points
+      #block(above: 0.35em)[
         #set text(
-          size: 8.5pt, // Further reduced bullet point size
+          size: 9.5pt,
           style: "normal",
           weight: "regular",
           fill: color-darknight,
         )
-        #set par(leading: 0.55em, justify: true) // Justified bullet points text
+        #set par(leading: 0.75em, justify: true)
         #list(
           ..bullets.map(item => parse_links(parse_italics(item))),
           indent: 0.7em,
-          spacing: 0.3em // Reduced bullet point spacing
+          spacing: 0.55em
         )
       ]
     ]
@@ -481,7 +481,7 @@ $endif$
   date: "",
   bullets: (),
 ) = {
-  block(spacing: 0em, below: 1.2em)[  // Increased spacing below each entry
+  block(spacing: 0em, below: 1.2em, breakable: false)[
     // Degree name bold at the top left, institution bold at top right
     #justified-header(
       [#degree],
@@ -502,18 +502,18 @@ $endif$
     
     // Bullet points if provided
     #if bullets != none and bullets.len() > 0 [
-      #block(above: 0.4em)[  // Increased padding before bullet points
+      #block(above: 0.35em)[
         #set text(
-          size: 8.5pt, // Further reduced bullet point size
+          size: 9.5pt,
           style: "normal",
           weight: "regular",
           fill: color-darknight,
         )
-        #set par(leading: 0.55em, justify: true) // Justified bullet points text
+        #set par(leading: 0.75em, justify: true)
         #list(
           ..bullets.map(item => parse_links(parse_italics(item))),
           indent: 0.7em,
-          spacing: 0.3em // Reduced bullet point spacing
+          spacing: 0.55em
         )
       ]
     ]
@@ -555,16 +555,16 @@ $endif$
     #if bullets != none and bullets.len() > 0 [
       #block(above: 0.3em)[
         #set text(
-          size: 8.5pt, // Same size as base font
+          size: 9.5pt,
           style: "normal",
           weight: "regular",
           fill: color-darknight,
         )
-        #set par(leading: 0.7em, justify: true) // Consistent with other bullet points
+        #set par(leading: 0.75em, justify: true)
         #list(
           ..bullets.map(item => parse_links(parse_italics(item))),
           indent: 0.8em,
-          spacing: 0.5em // Same spacing as other bullet points
+          spacing: 0.55em
         )
       ]
     ]
@@ -589,7 +589,7 @@ $endif$
   )
   
   set text(
-    font: (font-text),
+    font: font-text,
     size: 10pt, // Increased base font size from 9pt to 10pt
     fill: color-darkgray,
     fallback: true,
@@ -618,7 +618,7 @@ $endif$
           CV
         ]
       ][
-        #counter(page).display()
+        #context counter(page).display()
       ]
     ],
   )
@@ -628,20 +628,18 @@ $endif$
     outlined: false,
   )
   
-  show heading.where(level: 1): it => [
-    #set block(
-      above: 1.4em, // Further increased spacing above section headings
-      below: 0.8em, // Increased spacing below section headings
-    )
+  show heading.where(level: 1): it => block(breakable: false, above: 1.6em, below: 1.1em)[
     #set text(
-      size: 15pt, // Increased size further
+      size: 15pt,
       weight: "regular",
-      fill: color-accent, // Full heading in dark blue
+      fill: color-accent,
     )
-    
-    #align(left)[
-      #text[#strong[#it.body]]
-      #box(width: 1fr, line(length: 100%, stroke: color-accent)) // Line also in dark blue
+    #pad(bottom: 3pt)[
+      #align(left)[
+        #text[#strong[#it.body]]
+        #h(0.4em)
+        #box(width: 1fr, line(length: 100%, stroke: color-accent))
+      ]
     ]
   ]
   

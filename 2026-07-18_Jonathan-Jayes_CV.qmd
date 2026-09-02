@@ -1,0 +1,145 @@
+---
+title: "Jonathan Jayes' CV"
+author:
+  firstname: Jonathan Alistair
+  lastname: Jayes
+  address: "Based in Malmö, Sweden. Relocating to Paris."
+  position: "Data Scientist"
+  contacts:
+    - icon: fa envelope
+      text: j0nathanjayes@gmail.com
+      url: "j0nathanjayes@gmail.com"
+    - icon: assets/icon/bi-house-fill.svg
+      text: interludeone.com
+      url: https://interludeone.com
+    - icon: fa brands github
+      text: github.com/j-jayes
+      url: https://github.com/j-jayes
+    - icon: fa brands linkedin
+      text: linkedin.com/in/jonathanjayes
+      url: https://linkedin.com/in/jonathanjayes
+format:
+  awesomecv-typst:
+    font-paths:
+      - fonts
+---
+
+A product-focused Data Scientist with 5 years of experience deploying AI systems into production across labour markets, legal services, and environmental compliance. I am drawn to Mistral because I believe frontier AI is most powerful when it is rigorously measured, continuously improved, and genuinely useful — and I want to work with the team building it. I have used Mistral models in production, designed feature experiments for deployed AI chatbots, and built end-to-end data pipelines that turn complex unstructured data into actionable insight. I thrive at the intersection of product, research, and engineering: equally comfortable writing a SQL query to diagnose an edge case as presenting findings to a non-technical client. I am relocating to Paris and excited to contribute to Mistral's mission of building open, sovereign, and transformative AI.
+
+## Work Experience
+
+```{=typst}
+#resume-entry(
+  company_name: "Nexer Insight",
+  location: "Malmö, Sweden",
+  title: "Data Scientist",
+  date: "2025 - Present",
+  description: "Deliver production AI systems for clients across legal services, labour markets, and environmental compliance; lead a team of three and mentor junior colleagues.",
+  bullets: (
+    "Built and deployed an AI legal chatbot serving 800 lawyers across Sweden using Google's Agent Development Kit and a React frontend; used Mistral and other frontier models in production, benchmarking them on cost and quality; implemented feature flags to measure the impact of a suggested follow-up question feature on user engagement — the chatbot is being scaled across the EU.",
+    "Led a data-ingestion sprint for the same chatbot, experimenting with chunking strategies and OCR models to maximise throughput at low cost, improving pipeline quality and reducing ingestion errors.",
+    "Architected and deployed a production RAG system — now live on the website of Sweden's largest labour union — that enables members to query salary statistics from Statistics Sweden (SCB) through a custom web interface, empowering workers with data-driven benchmarks before salary negotiations.",
+    "Developed a green-claim identification system for a major Swedish garden products manufacturer, applying NLP to detect greenwashing across multi-channel advertising campaigns and verify compliance with EU environmental marketing regulations.",
+    "Designed and delivered a Microsoft Copilot Studio workshop series for 40 municipal workers at a south-Swedish utility company, equipping them to build and deploy AI agents in business-critical workflows.",
+    "Managed a delivery team of three data scientists and mentored an intern through applied ML projects, combining technical coaching with agile project management (Jira) to ensure on-time delivery.",
+  )
+)
+
+#resume-entry(
+  company_name: "Codera Analytics",
+  location: "Lund, Sweden (Remote)",
+  title: "Full Stack Data Scientist",
+  date: "2022 - 2025",
+  description: "Led data science projects spanning AI automation, African public finance, and large-scale data infrastructure.",
+  bullets: (
+    "Led development of an AI-powered end-to-end pipeline to automate data extraction from diverse corporate reports, reducing manual processing time by ~80%; tracked extraction success rates via a monitoring dashboard to identify edge cases and drive continuous improvement.",
+    "Managed the complete lifecycle of a large-scale public finance data project for Africa, from successful bid to delivery of a structured dataset covering 2,700+ documents.",
+    "Developed and implemented an SDMX-compliant ingestion pipeline for South African Reserve Bank (SARB) and National Treasury financial statistics, utilising Python for ETL and SQL for data validation, making key verified datasets publicly available.",
+    "Engineered a scalable data pipeline incorporating >60 web scrapers and robust database architecture to collect, process, and store complex public finance documents across Africa.",
+  )
+)
+
+#resume-entry(
+  company_name: "Fathom Data",
+  location: "Lund, Sweden",
+  title: "Junior Data Scientist",
+  date: "Summer 2022",
+  description: "Developed a data product analyzing scraped consumer pricing trends.",
+  bullets: (
+    "Developed an automated reporting pipeline using SQL and R to analyse consumer pricing trends from scraped web data, generating insights that informed commercial strategy and client segmentation.",
+  )
+)
+
+#resume-entry(
+  company_name: "FTI Consulting South Africa",
+  title: "Junior Competition Economics Consultant",
+  location: "Cape Town, South Africa",
+  date: "03/2019 - 01/2020",
+  description: "Supported senior economists on competition cases, trade disputes, and industry assessments.",
+  bullets: (
+    "Drafted sections and compiled supporting evidence for the economic report on a 2-to-1 ostrich merger, contributing to analyses of market definition and competitive effects.",
+    "Executed detailed analysis of South African poultry imports using 8-digit HS code data in Stata and Excel, identifying key trends in volume and pricing relevant to a trade dispute.",
+    "Mapped and analysed mobile data pricing structures across operators, identifying patterns in market segmentation and bundle differentiation.",
+  )
+)
+
+```
+
+
+## Education
+
+```{=typst}
+#education-entry(
+  degree: "PhD in Economic History",
+  institution: "Lund University",
+  subheader: "Defended October 2025.",
+  date: "2021 - 2025",
+  bullets: (
+    "Designed and implemented a novel AI pipeline automating the extraction and structuring of data from historical biographical dictionaries; built a monitoring dashboard tracking successful document-to-database conversions to identify and resolve extraction failures.",
+    "Applied NLP to biographical data to study skilled labour origins and career trajectories, publishing findings as reproducible, open-source analyses using Quarto.",
+    "Compiled large-scale historical datasets involving digitisation, data cleaning, geocoding, and occupational classification (HISCO, HISCLASS).",
+    "Taught courses on quantitative methods, Stata, and map-making.",
+  )
+)
+
+#education-entry(
+  degree: "Masters in Economics",
+  institution: "Stellenbosch University",
+  subheader: "Graduated with distinction.",
+  date: "2020 - 2021"
+)
+
+#education-entry(
+  degree: "Honours in Economics and Bachelors in Social Science",
+  institution: "University of Cape Town",
+  subheader: "Dean's Merit List. Top mark in my year for four courses.",
+  date: "2015 - 2018"
+)
+
+```
+
+## Skills
+
+```{=typst}
+#skills-entry(
+  title: "Technical Skills",
+  description: "",
+  bullets: (
+    "Data Analysis: Python (Pandas, Polars, scikit-learn), R (tidyverse), SQL, Stata, Advanced Excel",
+    "Machine Learning & AI: Statistical modelling, experimental design, A/B testing, NLP, RAG, LLM APIs (Mistral, OpenAI, Gemini, Claude), Google Agent Development Kit (ADK)",
+    "Engineering: AWS (Lambda), Google Cloud (Functions, Firebase), Docker, Git, GitHub Actions (CI/CD), React",
+    "Open source: Quarto advocate and blogger — write about reproducible data science workflows and document rendering",
+  )
+)
+
+#skills-entry(
+  title: "Languages",
+  description: "English (native), Swedish (B2), French (A2 — actively improving ahead of move to Paris)."
+)
+
+#skills-entry(
+  title: "Interests",
+  description: "Running, Geoguessr, international trade, and open-source software."
+)
+
+```
